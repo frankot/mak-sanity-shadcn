@@ -1,0 +1,40 @@
+.mouse {
+    margin: 0 auto;
+    display: block;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    height: 50px;
+    width: 26px;
+    position: relative;
+    opacity: 60%;
+  }
+  
+  .move {
+    position: absolute;
+    background-color: #fff;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: move 1.5s linear infinite;
+  }
+  .hideAnim {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+@keyframes move {
+  0% {
+    transform: translate(-50%, 10px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, 15px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 25px);
+    opacity: 0;
+  }
+}
