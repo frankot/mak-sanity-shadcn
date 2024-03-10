@@ -1,8 +1,20 @@
+import NewsFeatured from "@/components/NewsFeatured";
 import Video from "@/components/video";
-import Image from "next/image";
+
+
+
+
+
 
 export default function Home() {
-  return <div className="min-h-[200vh]">
-    <Video/>
-  </div>;
+
+  return (
+    <div className="min-h-[200vh]">
+      <Video />
+      <NewsFeatured />
+      <div className="h-screen w-full bg-red-500">
+
+      </div>
+    </div>
+  );
 }

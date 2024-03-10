@@ -1,40 +1,32 @@
-.mouse {
-    margin: 0 auto;
-    display: block;
-    border-radius: 50px;
-    border: 2px solid #fff;
-    height: 50px;
-    width: 26px;
-    position: relative;
-    opacity: 60%;
-  }
+.scroll-downs {
+  position: absolute;
+
+  margin: auto;
   
-  .move {
-    position: absolute;
-    background-color: #fff;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: move 1.5s linear infinite;
-  }
-  .hideAnim {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-@keyframes move {
-  0% {
-    transform: translate(-50%, 10px);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-50%, 15px);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, 25px);
-    opacity: 0;
-  }
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }

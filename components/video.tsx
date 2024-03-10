@@ -17,7 +17,7 @@ export default function Video() {
     };
   }, []);
   return (
-    <div className=" pb-[94vh] lg:pb-0 lg:mb-[95vh]">
+    <div className="ab pb-[94vh] lg:pb-0 lg:mb-[95vh]">
       <video
         className="absolute lg:top-0 -z-10 pb-10 lg:pb-0 h-screen w-screen object-cover "
         autoPlay
@@ -28,7 +28,7 @@ export default function Video() {
       >
         <source src="/promo-vid.mp4" type="video/mp4" />
       </video>
-      <div className="bottom-20 left-1/2 absolute" id="scroll-down-animation">
+      <div className="bottom-20 left-1/2 absolute " id="scroll-down-animation">
         <span className={`mouse ${isScrollingDown ? "hideAnim" : ""}`}>
           <span className="move "></span>
         
