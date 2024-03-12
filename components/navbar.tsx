@@ -1,5 +1,5 @@
 "use client";
-import {  SheetContent, Sheet } from "@/components/ui/sheet";
+import {  Sheet } from "@/components/ui/sheet";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -12,8 +12,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-
 import dynamic from 'next/dynamic';
+
+
 
 const SheetTrigger = dynamic(
   () => import('@/components/ui/sheet').then((mod) => mod.SheetTrigger),
@@ -25,13 +26,17 @@ const Button = dynamic(
   { ssr: false }
 );
 
+const SheetContent = dynamic(
+  () => import('@/components/ui/sheet').then((mod) => mod.SheetContent),
+  { ssr: false }
+);
 export function Navbar() {
   return (
     <div className="fixed top-0 w-full z-50">
-      <header className="flex h-20 rounded-lg bg-opacity-90 shadow-xl mx-10 mt-5 border-b-2 z-50 border-orange-400 bg-stone-100  shrink-0 items-center px-4 md:px-6 ">
+      <header className="flex h-20 rounded-lg  shadow-xl mx-10 mt-2 opacity-95  border-b-2 z-50 border-orange-400 bg-stone-100  shrink-0 items-center px-4 md:px-6 ">
         <Sheet>
           <div className="lg:hidden flex justify-between w-full">
-            <Button  className="lg:hidden" size="icon" variant="outline">
+            <Button asChild className="lg:hidden" size="icon" variant="outline">
               <SheetTrigger className="flex">
                 <MenuIcon className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
@@ -86,10 +91,15 @@ export function Navbar() {
           </SheetContent>
         </Sheet>
 
-        <Link className="mr-2 mb-1 hidden items-center lg:flex" href="#">
+        <Link className="mr-2 mb-1 items-center lg:flex" href="#">
           <Link href={"/"}>
             {" "}
-            <Image src="/logo-makak-horB.png" height={20} width={180} />
+            <Image
+              src="/logo-makak-horB.png"
+              className="lg:flex hidden h-auto"
+              height={20}
+              width={180}
+            />
             <span className="sr-only">Acme Inc</span>
           </Link>
         </Link>

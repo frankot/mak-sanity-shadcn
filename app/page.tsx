@@ -1,4 +1,6 @@
 import NewsFeatured from "@/components/NewsFeatured";
+import About from "@/components/about";
+
 import Video from "@/components/video";
 
 
@@ -9,12 +11,13 @@ import Video from "@/components/video";
 export default function Home() {
 
   return (
-    <div className="min-h-[200vh]">
+    <div className=" bg-stone-100">
       <Video />
       <NewsFeatured />
-      <div className="h-screen w-full bg-red-500">
+      <About/>
 
-      </div>
+
+  
     </div>
   );
 }

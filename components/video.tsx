@@ -17,9 +17,9 @@ export default function Video() {
     };
   }, []);
   return (
-    <div className="ab pb-[94vh] lg:pb-0 lg:mb-[95vh]">
+    <div className=" pb-[94vh] lg:pb-0 lg:mb-[95vh]">
       <video
-        className="absolute lg:top-0 -z-10 pb-10 lg:pb-0 h-screen w-screen object-cover "
+        className="absolute lg:top-0 z-10 pb-10 lg:pb-0 h-screen w-screen object-cover "
         autoPlay
         muted
         loop
