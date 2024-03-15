@@ -3,6 +3,7 @@ import { client, urlFor } from "@/lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import NewsCard from "./ui/newsCard";
+import Heading from "./ui/heading";
 async function getData() {
   const query = `*[_type == 'newsArticle'] | order(_createdAt asc){
     title,
@@ -18,16 +19,38 @@ async function getData() {
 export default async function NewsFeatured() {
   const data: newsCard[] = await getData();
   return (
-    <div className="bg-stone-100 py-32">
-      <h1 className="text-center mb-32 tracking-widest font-bold text-3xl uppercase border-b-4 pb-4 mx-44 border-orange-400">
-        Aktualności
-      </h1>
+    <div className="bg-stone-100 py-32 container mx-auto">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto flex max-w-2xl lg:divide-x divide-orange-400 flex-col items-center justify-between gap-x-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div className="w-full mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-stone-200/25 duration-500 lg:max-w-lg lg:flex-auto">
             <Link href={data[0].currentSlug}>
+              <div className="relative w-full px-8 mt-8 mb-2 mx-auto">
+                <dd className=" text-sm  leading-7 text-gray-500">
+                  01.02.2024
+                </dd>
+                <button className="absolute uppercase bottom-0 right-5 inline-flex items-center rounded-full bg-orange-400 px-3 py-2 text-center text-sm font-medium text-white ">
+                  {" "}
+                  read more
+                  <svg
+                    className="ms-2 h-3.5 w-3.5 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </button>{" "}
+              </div>
               <h2 className="text-3xl pt-4 px-5 font-bold tracking-tight text-gray-900 sm:text-4xl group-hover:text-orange-400 duration-300">
                 {data[0].title}{" "}
+                <hr className="mt-4 mr-24 h-px  border-none bg-orange-400" />
               </h2>
               <p className="py-6 text-lg  leading-7 text-gray-600 group-hover:text-gray-800 duration-300 px-5">
                 {data[0].copy}
