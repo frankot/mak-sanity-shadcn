@@ -33,7 +33,7 @@ const SheetContent = dynamic(
 export function Navbar() {
   return (
     <div className="fixed top-0 w-full z-50">
-      <header className="flex h-20 rounded-lg  shadow-xl mx-10 mt-2 opacity-95  border-b-2 z-50 border-orange-400 bg-stone-100  shrink-0 items-center px-4 md:px-6 ">
+      <header className="flex h-20   shadow-xl   opacity-95  border-b-2 z-50 border-orange-400 bg-stone-100  shrink-0 items-center px-4 md:px-20 ">
         <Sheet>
           <div className="lg:hidden flex justify-between w-full">
             <Button asChild className="lg:hidden" size="icon" variant="outline">
@@ -172,3 +172,5 @@ function MenuIcon(props) {
     </svg>
   );
 }
+
+

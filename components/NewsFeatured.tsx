@@ -22,13 +22,13 @@ export default async function NewsFeatured() {
     <div className="bg-stone-100 py-32 container mx-auto">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto flex max-w-2xl lg:divide-x divide-orange-400 flex-col items-center justify-between gap-x-16 lg:mx-0 lg:max-w-none lg:flex-row">
-          <div className="w-full mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-stone-200/25 duration-500 lg:max-w-lg lg:flex-auto">
+          <div className="w-full mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-white duration-500 lg:max-w-lg lg:flex-auto">
             <Link href={data[0].currentSlug}>
               <div className="relative w-full px-8 mt-8 mb-2 mx-auto">
-                <dd className=" text-sm  leading-7 text-gray-500">
+                <dd className="text-base  leading-7 text-gray-500">
                   01.02.2024
                 </dd>
-                <button className="absolute uppercase bottom-0 right-5 inline-flex items-center rounded-full bg-orange-400 px-3 py-2 text-center text-sm font-medium text-white ">
+                <button className="absolute uppercase bottom-0 right-5 inline-flex items-center rounded-full bg-orange-400 px-3 py-2 text-center text-base font-medium text-white ">
                   {" "}
                   read more
                   <svg
@@ -48,7 +48,7 @@ export default async function NewsFeatured() {
                   </svg>
                 </button>{" "}
               </div>
-              <h2 className="text-3xl pt-4 px-5 font-bold tracking-tight text-gray-900 sm:text-4xl group-hover:text-orange-400 duration-300">
+              <h2 className="text-3xl pt-4 px-5 font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {data[0].title}{" "}
                 <hr className="mt-4 mr-24 h-px  border-none bg-orange-400" />
               </h2>
@@ -57,9 +57,9 @@ export default async function NewsFeatured() {
               </p>
               <Image
                 src={urlFor(data[0].image).url()}
-                height={800}
-                width={800}
-                className=" h-full group-hover:scale-[1.01]  duration-1000  rounded-t-2x object-cover "
+                height={40}
+                width={500}
+                className="w-full h-[32rem] group-hover:scale-[1.01]  duration-1000  rounded-t-2x object-scale-down "
                 alt={data[0].title}
               />{" "}
             </Link>
@@ -67,17 +67,17 @@ export default async function NewsFeatured() {
           <div className="w-full lg:max-w-2xl lg:flex-auto mt-10 lg:pl-10">
             <h3 className="sr-only">Job openings</h3>
             <ul className="-my-8 divide-y ">
-              {data.slice(1).map((news, idx) => (
+              {data.slice(1, 5).map((news, idx) => (
                 <NewsCard newsItem={news} key={idx} />
               ))}
             </ul>
             <div className="mt-8 flex border-t border-gray-100 pl-8 pt-8">
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-orange-400 hover:text-indigo-500"
+              <Link
+                href="news"
+                className="text-sm font-semibold leading-6 text-orange-400 hover:text-slate-600"
               >
-                View all openings <span aria-hidden="true">&rarr;</span>
-              </a>
+                View all news <span aria-hidden="true">&rarr;</span>
+              </Link>
             </div>
           </div>
         </div>
