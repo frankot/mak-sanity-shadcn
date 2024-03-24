@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity";
+import Link from "next/link";
 
 export default function NewsCard({ newsItem }) {
   return (
@@ -15,10 +16,10 @@ export default function NewsCard({ newsItem }) {
       <dl className="relative flex flex-wrap gap-x-3 pl-4 mt-2">
         <dt className="sr-only">Role</dt>
         <dd className="w-full mt-2 flex-none text-lg font-semibold tracking-tight text-gray-900">
-          <a href={newsItem.currentSlug}>
+          <Link href={`/news/${newsItem.currentSlug}`}>
             {newsItem.title}
             <span className="absolute inset-0" aria-hidden="true" />
-          </a>
+          </Link>
           <hr className="my-2 mr-24 h-px  border-none bg-orange-400" />
         </dd>
         <dt className="sr-only">Description</dt>

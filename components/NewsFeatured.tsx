@@ -23,7 +23,7 @@ export default async function NewsFeatured() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto flex max-w-2xl lg:divide-x divide-orange-400 flex-col items-center justify-between gap-x-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div className="w-full mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-white duration-500 lg:max-w-lg lg:flex-auto">
-            <Link href={data[0].currentSlug}>
+            <Link href={`/news/${data[0].currentSlug}`}>
               <div className="relative w-full px-8 mt-8 mb-2 mx-auto">
                 <dd className="text-base  leading-7 text-gray-500">
                   01.02.2024
