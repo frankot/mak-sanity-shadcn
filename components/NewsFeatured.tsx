@@ -20,9 +20,16 @@ export default async function NewsFeatured() {
   const data: newsCard[] = await getData();
   return (
     <div className="bg-stone-100 py-32 container mx-auto">
+      
+      {/* <div className="mx-auto  mb-20">
+        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl md:text-7xl h-fit bg-gradient-to-r from-orange-400 via-orange-800 to-stone-600 inline-block text-transparent py-2 bg-clip-text">
+          Aktualności{" "}
+        </h2>
+    
+      </div> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto flex max-w-2xl lg:divide-x divide-orange-400 flex-col items-center justify-between gap-x-16 lg:mx-0 lg:max-w-none lg:flex-row">
-          <div className="w-full mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-white duration-500 lg:max-w-lg lg:flex-auto">
+          <div className="lg:w-1/3   mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-white duration-500 lg:max-w-lg lg:flex-auto">
             <Link href={`/news/${data[0].currentSlug}`}>
               <div className="relative w-full px-8 mt-8 mb-2 mx-auto">
                 <dd className="text-base  leading-7 text-gray-500">
@@ -57,9 +64,9 @@ export default async function NewsFeatured() {
               </p>
               <Image
                 src={urlFor(data[0].image).url()}
-                height={40}
-                width={500}
-                className="w-full h-[32rem] group-hover:scale-[1.01]  duration-1000  rounded-t-2x object-scale-down "
+                height={4000}
+                width={5000}
+                className="w-full h-auto group-hover:scale-[1.01]  duration-1000  rounded-t-2x object-scale-down "
                 alt={data[0].title}
               />{" "}
             </Link>
