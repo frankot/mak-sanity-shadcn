@@ -5,7 +5,7 @@ import Ab from "@/components/ab";
 import Video from "@/components/video";
 import Activities from "@/components/Activities";
 import LineBreak from "@/components/ui/lineBreak";
-
+import Kursy from "@/components/kursy";
 
 const ACTIVITIES = [
   {
@@ -43,13 +43,13 @@ export default function Home() {
   return (
     <div className=" bg-stone-100">
       <Video />
-      <Activities acts={ACTIVITIES}/>
-      <LineBreak/>
+      <Activities acts={ACTIVITIES} />
+      <LineBreak />
       <NewsFeatured />
-      <LineBreak/>
-
+      <LineBreak />
+      <Kursy />
       <About />
-      
+
       <Ab />
       <Partners />
     </div>

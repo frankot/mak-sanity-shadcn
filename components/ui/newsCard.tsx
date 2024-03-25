@@ -11,6 +11,7 @@ export default function NewsCard({ newsItem }) {
           height={1000}
           width={1000}
           className="object-cover h-full w-full rounded-l-2xl"
+          alt={newsItem.title}
         />
       </div>
       <dl className="relative flex flex-wrap gap-x-3 pl-4 mt-2">
