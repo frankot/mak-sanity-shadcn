@@ -41,7 +41,7 @@ const ACTIVITIES = [
 ];
 export default function Home() {
   return (
-    <div className=" bg-stone-100">
+    <div className="">
       <Video />
       <Activities acts={ACTIVITIES} />
       <LineBreak />

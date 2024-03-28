@@ -3,43 +3,47 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 
 export function Navbar() {
-  return (
-    <div className="fixed top-0 w-full z-50">
-      <header className="flex h-20   shadow-xl  opacity-95  border-b-2 z-50 border-orange-400 bg-stone-100  shrink-0 items-center px-4 md:px-20 ">
-        <Sheet>
-          <div className="lg:hidden flex justify-between w-full">
-            <Button asChild className="lg:hidden" size="icon" variant="outline">
-              <SheetTrigger className="flex">
-                <MenuIcon className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </SheetTrigger>
-            </Button>
-          </div>
-          <Image
-            className="lg:hidden"
-            src="/logo-makak-horB.png"
-            height={20}
-            width={180}
-            alt="logo makak black horizontal"
-          />
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrollingDown(window.scrollY > 90);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  return (
+    <div className="fixed top-0 w-full z-50 ">
+      <header
+        className={`flex h-20 mx-4 rounded-b-xl lg:mx-6 shrink-0 items-center px-4 md:px-6 duration-300   ${
+          isScrollingDown ? "bg-opacity-95 bg-stone-100  shadow-lg " : "bg-opacity-0"
+        }`}
+      >
+        {" "}
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button className="lg:hidden" size="icon" variant="outline">
+              <MenuIcon className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
           <SheetContent side="left">
-            <Link className="mr-6 lg:hidden flex" href="#">
-              <Image
-                src="/logo-makak-horB.png"
-                height={20}
-                width={180}
-                alt="logo makak black"
-              />
+            <Link href="#">
               <span className="sr-only">Acme Inc</span>
             </Link>
             <div className="grid gap-2 py-6">
@@ -47,7 +51,7 @@ export function Navbar() {
                 className="flex w-full items-center py-2 text-lg font-semibold"
                 href="#"
               >
-                Homee
+                Home
               </Link>
               <Link
                 className="flex w-full items-center py-2 text-lg font-semibold"
@@ -55,7 +59,6 @@ export function Navbar() {
               >
                 About
               </Link>
-
               <Link
                 className="flex w-full items-center py-2 text-lg font-semibold"
                 href="#"
@@ -66,70 +69,67 @@ export function Navbar() {
                 className="flex w-full items-center py-2 text-lg font-semibold"
                 href="#"
               >
+                Portfolio
+              </Link>
+              <Link
+                className="flex w-full items-center py-2 text-lg font-semibold"
+                href="#"
+              >
                 Contact
               </Link>
             </div>
           </SheetContent>
         </Sheet>
-
-        <Link className="mr-2 mb-1 items-center lg:flex" href="#">
-          <Link href={"/"}>
-            {" "}
-            <Image
-              src="/logo-makak-horB.png"
-              className="lg:flex hidden h-auto"
-              height={20}
-              width={180}
-              alt="Black Makak logo horizontal"
-            />
-            <span className="sr-only">Acme Inc</span>
-          </Link>
+        <Link className="mr-6 hidden lg:flex" href="#">
+          <span className="sr-only">Acme Inc</span>
         </Link>
-        <div className="flex justify-between w-full items-center">
-          <nav className="ml- hidden  lg:flex gap-6">
-            <NavigationMenu>
-              <NavigationMenuList>
-                {" "}
+        <div className="w-full flex justify-center">
+          <NavigationMenu className="hidden lg:flex ">
+            <NavigationMenuList className="">
+              <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm  font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
                   href="#"
                 >
-                  Homea
+                  Home
                 </Link>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="group bg-opacity-0 inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 ">
-                    About
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="p-10">
-                    sadasd
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  {" "}
-                  <Link
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
-                    href="#"
-                  >
-                    Services
-                  </Link>
-                </NavigationMenuItem>
+              </NavigationMenuLink>
+              <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
-                  href="/contact"
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  href="#"
+                >
+                  About
+                </Link>
+              </NavigationMenuLink>
+              <NavigationMenuLink asChild>
+                <Link
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  href="#"
+                >
+                  Services
+                </Link>
+              </NavigationMenuLink>
+              <NavigationMenuLink asChild>
+                <Link
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  href="#"
+                >
+                  Portfolio
+                </Link>
+              </NavigationMenuLink>
+              <NavigationMenuLink asChild>
+                <Link
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  href="#"
                 >
                   Contact
                 </Link>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </nav>
-          <div className="hidden lg:flex text-sm ">
-            <button className=" p-2 rounded-lg mr-2 tracking-wider">PL</button>
-            <button className="bg-orange-400 p-2 rounded-lg tracking-wider">
-              ENG
-            </button>
-          </div>
+              </NavigationMenuLink>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
-      </header>
+      </header>{" "}
     </div>
   );
 }
