@@ -31,10 +31,13 @@ export function Navbar() {
     <div className="fixed top-0 w-full z-50 ">
       <header
         className={`flex h-20 mx-4 rounded-b-xl lg:mx-6 shrink-0 items-center px-4 md:px-6 duration-300   ${
-          isScrollingDown ? "bg-opacity-95 bg-stone-100  shadow-lg " : "bg-opacity-0"
+          isScrollingDown
+            ? "bg-opacity-95 bg-stone-100  shadow-lg "
+            : "bg-opacity-0"
         }`}
       >
         {" "}
+        {/* MOBILE NAV */}
         <Sheet>
           <SheetTrigger asChild>
             <Button className="lg:hidden" size="icon" variant="outline">
@@ -80,6 +83,7 @@ export function Navbar() {
             </div>
           </SheetContent>
         </Sheet>
+        {/* DESKTOP NAV */}
         <Link className="mr-6 hidden lg:flex" href="#">
           <span className="sr-only">Acme Inc</span>
         </Link>
@@ -102,14 +106,19 @@ export function Navbar() {
                   About
                 </Link>
               </NavigationMenuLink>
-              <NavigationMenuLink asChild>
-                <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
-                  href="#"
-                >
-                  Services
-                </Link>
-              </NavigationMenuLink>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Servicesss</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  {" "}
+                  <Link
+                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                    href="#"
+                  >
+                    dsad
+                  </Link>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
                   className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
