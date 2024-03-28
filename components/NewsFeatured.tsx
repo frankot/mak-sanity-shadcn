@@ -3,7 +3,7 @@ import { client, urlFor } from "@/lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import NewsCard from "./ui/newsCard";
-import Heading from "./ui/heading";
+import Title from "./ui/title";
 async function getData() {
   const query = `*[_type == 'newsArticle'] | order(_createdAt asc){
     title,
@@ -19,14 +19,10 @@ async function getData() {
 export default async function NewsFeatured() {
   const data: newsCard[] = await getData();
   return (
-    <div className="bg-stone-100 py-32 container mx-auto">
+    <div className="bg-stone-100 py-24 container mx-auto">
       
-      {/* <div className="mx-auto  mb-20">
-        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl md:text-7xl h-fit bg-gradient-to-r from-orange-400 via-orange-800 to-stone-600 inline-block text-transparent py-2 bg-clip-text">
-          Aktualności{" "}
-        </h2>
-    
-      </div> */}
+   <Title title="Aktualności"/>
+
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto flex max-w-2xl lg:divide-x divide-orange-400 flex-col items-center justify-between gap-x-16 lg:mx-0 lg:max-w-none lg:flex-row">
           <div className="lg:w-1/3   mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-white duration-500 lg:max-w-lg lg:flex-auto">

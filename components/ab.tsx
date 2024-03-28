@@ -42,7 +42,7 @@ export default function ab() {
           aria-hidden="true"
         >
           <div
-            className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-orange-400 opacity-30"
+            className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-orange-600 opacity-30"
             style={{
               clipPath:
                 "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
@@ -53,7 +53,7 @@ export default function ab() {
           <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                <h1 className="text-4xl font-bold tracking-tight text-orange-500 sm:text-6xl">
                 Największy rejon wspinaczkowy na mazowszu!              </h1>
                 <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                   Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
@@ -120,7 +120,7 @@ export default function ab() {
       {/* Content section */}
       <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-orange-500 sm:text-4xl">
             Wspinanie jest dla wszystkich
           </h2>
           <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
@@ -154,12 +154,12 @@ export default function ab() {
                 {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex flex-col-reverse gap-y-4"
+                    className="flex flex-col-reverse gap-y-4 "
                   >
                     <dt className="text-base leading-7 text-gray-600">
                       {stat.label}
                     </dt>
-                    <dd className="text-5xl font-semibold tracking-tight text-gray-900">
+                    <dd className="text-5xl font-semibold tracking-tight text-orange-500">
                       {stat.value}
                     </dd>
                   </div>

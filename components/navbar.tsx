@@ -32,7 +32,7 @@ export function Navbar() {
       <header
         className={`flex h-20 mx-4 rounded-b-xl lg:mx-6 shrink-0 items-center px-4 md:px-6 duration-300   ${
           isScrollingDown
-            ? "bg-opacity-95 bg-stone-100  shadow-lg "
+            ? "bg-opacity-100 bg-orange-400  shadow-lg "
             : "bg-opacity-0"
         }`}
       >
@@ -87,49 +87,50 @@ export function Navbar() {
         <Link className="mr-6 hidden lg:flex" href="#">
           <span className="sr-only">Acme Inc</span>
         </Link>
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-between">
           <NavigationMenu className="hidden lg:flex ">
             <NavigationMenuList className="">
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  className="group inline-flex h-9 uppercase text-white w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
                   href="#"
                 >
                   Home
                 </Link>
               </NavigationMenuLink>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Servicesss</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  {" "}
+                  <Link
+                    className="group inline-flex h-9 uppercase text-white w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                    href="#"
+                  >
+                    dsaddasdasdasdasd
+                  </Link>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  className="group inline-flex h-9 uppercase text-white w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
                   href="#"
                 >
                   About
                 </Link>
               </NavigationMenuLink>
 
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Servicesss</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  {" "}
-                  <Link
-                    className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
-                    href="#"
-                  >
-                    dsad
-                  </Link>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  className="group inline-flex h-9 uppercase text-white w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
                   href="#"
                 >
                   Portfolio
                 </Link>
               </NavigationMenuLink>
+
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
+                  className="group inline-flex h-9 uppercase text-white w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 "
                   href="#"
                 >
                   Contact
@@ -137,6 +138,9 @@ export function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuList>
           </NavigationMenu>
+          <div>
+            <Image src="/logo-makak-horW.png" width={250} height={500} className="text-red-500 mr-12"></Image>
+          </div>
         </div>
       </header>{" "}
     </div>

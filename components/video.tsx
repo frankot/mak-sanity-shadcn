@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import "../app/styles/mouse.module.css";
+import Image from "next/image";
 export default function Video() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
 
@@ -28,6 +29,7 @@ export default function Video() {
       >
         <source src="/promo-vid.mp4" type="video/mp4" />
       </video>
+      <Image src="/logo-makak.png" width={500} height={500} className="absolute top-20 left-1/3 z-30"/>
       <div className="bottom-20 left-1/2 absolute " id="scroll-down-animation">
         <span className={`mouse ${isScrollingDown ? "hideAnim" : ""}`}>
           <span className="move "></span>
