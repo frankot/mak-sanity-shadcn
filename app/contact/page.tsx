@@ -2,13 +2,14 @@ import {
   BuildingOffice2Icon,
   EnvelopeIcon,
   PhoneIcon,
+  ClockIcon,
 } from "@heroicons/react/24/outline";
 
-export default function Example() {
+export default function Contact() {
   return (
     <div className="relative isolate lg:mt-20 bg-stone-100">
       <div className="mx-auto grid max-w-[90rem] grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:pl-16 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-gray-900/10 lg:w-1/2">
               <svg
@@ -43,6 +44,7 @@ export default function Example() {
                 />
               </svg>
             </div>
+
             <h2 className="text-3xl font-bold tracking-tight text-orange-400">
               Skontaktuj się z nami
             </h2>
@@ -51,55 +53,72 @@ export default function Example() {
               odbieramy, to pewnie się wspinamy, więc spróbujcie za kilka chwil
               ;-)
             </p>
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Address</span>
-                  <BuildingOffice2Icon
-                    className="h-7 w-6 text-orange-400"
-                    aria-hidden="true"
-                  />
-                </dt>
-                <dd>
-                  Palisadowa 20/22 <br />
-                  01-940 Warszawa
-                </dd>
+            <div className="flex">
+              <dl className="mt-12 space-y-4 text-base leading-7 text-gray-600">
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">Address</span>
+                    <BuildingOffice2Icon
+                      className="h-7 w-6 text-orange-400"
+                      aria-hidden="true"
+                    />
+                  </dt>
+                  <dd>
+                    Palisadowa 20/22 <br />
+                    01-940 Warszawa
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">Telephone</span>
+                    <PhoneIcon
+                      className="h-7 w-6 text-orange-400"
+                      aria-hidden="true"
+                    />
+                  </dt>
+                  <dd>
+                    <a
+                      className="hover:text-gray-900"
+                      href="tel:(+48) 730 710 775"
+                    >
+                      (+48) 730 710 775
+                    </a>
+                  </dd>
+                </div>
+                <div className="flex gap-x-4">
+                  <dt className="flex-none">
+                    <span className="sr-only">Email</span>
+                    <EnvelopeIcon
+                      className="h-7 w-6 text-orange-400"
+                      aria-hidden="true"
+                    />
+                  </dt>
+                  <dd>
+                    <a
+                      className="hover:text-gray-900"
+                      href="mailto:info@arenamakak.pl"
+                    >
+                      info@arenamakak.pl{" "}
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+              <div className="mt-10 lg:ml-10 lg:pl-10 ml-5 pl-5 border-orange-400 border-l space-y-4 text-base leading-7 text-gray-600">
+                <div className=" font-bold text-orange-400 flex items-center -ml-2 lg:-ml-6 ">
+                  {" "}
+                  <ClockIcon className="h-6 mr-2" aria-hidden="true" />
+                  <p>Godziny Otwarcia</p>
+                </div>
+                <div className="">
+                  <p>Poniedziałek 9-23</p>
+                  <p>Wtorek 7-23</p>
+                  <p>Środa 9-23</p>
+                  <p>Czwartek 7-23</p>
+                  <p>Piątek 9-23</p>
+                  <p>Sob-Nied 9-22</p>
+                </div>
               </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Telephone</span>
-                  <PhoneIcon
-                    className="h-7 w-6 text-orange-400"
-                    aria-hidden="true"
-                  />
-                </dt>
-                <dd>
-                  <a
-                    className="hover:text-gray-900"
-                    href="tel:(+48) 730 710 775"
-                  >
-                    (+48) 730 710 775
-                  </a>
-                </dd>
-              </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Email</span>
-                  <EnvelopeIcon
-                    className="h-7 w-6 text-orange-400"
-                    aria-hidden="true"
-                  />
-                </dt>
-                <dd>
-                  <a
-                    className="hover:text-gray-900"
-                    href="mailto:info@arenamakak.pl"
-                  >
-                    info@arenamakak.pl{" "}
-                  </a>
-                </dd>
-              </div>
-            </dl>
+            </div>
           </div>
         </div>
         <div className="rounded-xl w-full">
@@ -114,14 +133,6 @@ export default function Example() {
             className=" h-[25rem] lg:h-full grayscale"
           ></iframe>
         </div>
-        {/* <div>
-          <h1>Godziny otwarcia</h1>
-          <div>
-            PONIEDZIAŁEK 9.00-23.00 WTOREK 7.00-23.00 ŚRODA 9.00-23.00 CZWARTEK
-            7.00-23.00 PIĄTEK 9.00-23.00 SOBOTA 9.00-22.00 NIEDZIELA 9.00-22.00
-          </div>
-        </div>
-        <div>Przyjedź do nas</div> */}
       </div>
     </div>
   );

@@ -1,39 +1,20 @@
 "use client";
-import {  Sheet } from "@/components/ui/sheet";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
 import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import dynamic from 'next/dynamic';
 
-
-
-const SheetTrigger = dynamic(
-  () => import('@/components/ui/sheet').then((mod) => mod.SheetTrigger),
-  { ssr: false }
-);
-
-const Button = dynamic(
-  () => import('@/components/ui/button').then((mod) => mod.Button),
-  { ssr: false }
-);
-
-const SheetContent = dynamic(
-  () => import('@/components/ui/sheet').then((mod) => mod.SheetContent),
-  { ssr: false }
-);
 export function Navbar() {
   return (
     <div className="fixed top-0 w-full z-50">
-      <header className="flex h-20   shadow-xl   opacity-95  border-b-2 z-50 border-orange-400 bg-stone-100  shrink-0 items-center px-4 md:px-20 ">
+      <header className="flex h-20   shadow-xl  opacity-95  border-b-2 z-50 border-orange-400 bg-stone-100  shrink-0 items-center px-4 md:px-20 ">
         <Sheet>
           <div className="lg:hidden flex justify-between w-full">
             <Button asChild className="lg:hidden" size="icon" variant="outline">
@@ -99,6 +80,7 @@ export function Navbar() {
               className="lg:flex hidden h-auto"
               height={20}
               width={180}
+              alt="Black Makak logo horizontal"
             />
             <span className="sr-only">Acme Inc</span>
           </Link>
@@ -172,5 +154,3 @@ function MenuIcon(props) {
     </svg>
   );
 }
-
-
