@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <div className="fixed top-0 w-full z-50 ">
       <header
-        className={`flex h-16 shrink-0 items-center text-white px-4 md:px-24 duration-1000    ${
+        className={`flex h-16 shrink-0 mx-24 mt-2 rounded-full  borsder bg-opacity-90 border-orange-400 items-center text-white px-4 md:px-12 duration-1000    ${
           isScrollingDown && onHeroPage
             ? "bg-opacity-100 bg-stone-800 shadow text-stone-100"
             : "bg-opacity-0"

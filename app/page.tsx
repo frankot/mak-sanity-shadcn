@@ -54,9 +54,9 @@ export default function Home() {
     <div className="overscroll-y-contain">
       <Video />
       
+      <Activities acts={ACTIVITIES} />
       <Ab />
 
-      <Activities acts={ACTIVITIES} />
       {/* <LineBreak /> */}
       <Kursy />
 
