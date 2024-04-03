@@ -149,7 +149,7 @@ export default function ab() {
                 </p>
               </div>
             </div>
-            <div className="lg:flex lg:flex-auto lg:justify-center">
+            <div className="lg:flex lg:flex-auto lg:justify-center ml-10 md:ml-0">
               <dl className="w-64 space-y-8 xl:w-80">
                 {stats.map((stat) => (
                   <div

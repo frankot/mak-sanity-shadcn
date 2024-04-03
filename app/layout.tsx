@@ -18,13 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-stone-100"}>
-        <div>
+      <body className={inter.className + " bg-stone-100 "}>
           <Navbar />
 
           {children}
           <Footer />
-        </div>
+     
       </body>
     </html>
   );

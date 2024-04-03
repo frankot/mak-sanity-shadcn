@@ -2,14 +2,14 @@ import Image from "next/image";
 import Title from "./ui/title";
 export default function Activities({ acts }) {
   return (
-    <div className="max-w-2xl  lg:max-w-7xl mx-auto pt-20 pb-20 ">
+    <div className="max-w-2xl  lg:max-w-7xl mx-auto mt-28 pb-20 ">
       {" "}
       {/* <Title title="Aktywności" subtitle="Jako możesz się u nas bawić?" /> */}
       <div className=" flex flex-wrap justify-center gap-10 lg:gap-16 items-center ">
         {acts.map((act) => (
           <div
             key={act.id}
-            className=" lg:hover:bg-orange-400 lg:hover:scale-110 transform duration-300 grid place-items-center  rounded-xl p-4"
+            className="lg:hover:scale-110 lg:hover:bg-white transform duration-300 grid place-items-center  rounded-xl p-4"
           >
             {/* <img className="mb-2 h-32 w-32" src={act.icon} alt="" /> */}
             <Image
@@ -21,7 +21,7 @@ export default function Activities({ acts }) {
             />
             <div className="mt-6 grid grid-flow-col place-items-center">
               <svg
-                className="fill-mainText  mr-2 h-4"
+                className="fill-orange-400  mr-2 h-4"
                 xmlns="http://www.w3.org/2000/svg"
                 id="Filled"
                 viewBox="0 0 24 24"

@@ -20,13 +20,15 @@ export default async function NewsFeatured() {
   const data: newsCard[] = await getData();
   return (
     <div className="bg-stone-100 py-24 container mx-auto">
-      
-   <Title title="Aktualności"/>
+      <Title title="Aktualności" className="text-orange-500" />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto flex max-w-2xl lg:divide-x divide-orange-400 flex-col items-center justify-between gap-x-16 lg:mx-0 lg:max-w-none lg:flex-row">
-          <div className="lg:w-1/3   mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-white duration-500 lg:max-w-lg lg:flex-auto">
-            <Link href={`/news/${data[0].currentSlug}`}>
+      <div className="mx-auto max-w-7xl">
+        <div className="mx-auto flex flex-col items-center justify-between gap-x-16 lg:mx-0 lg:max-w-none lg:flex-row">
+          <div className="lg:w-1/3  mb-20 group hover:shadow-xl  border rounded-xl overflow-hidden hover:bg-white duration-500 lg:max-w-lg lg:flex-auto">
+            <Link
+              className="h-full my-auto flex lg:flex-col"
+              href={`/news/${data[0].currentSlug}`}
+            >
               <div className="relative w-full px-8 mt-8 mb-2 mx-auto">
                 <dd className="text-base  leading-7 text-gray-500">
                   01.02.2024
@@ -71,7 +73,9 @@ export default async function NewsFeatured() {
             <h3 className="sr-only">Job openings</h3>
             <ul className="-my-8 divide-y ">
               {data.slice(1, 5).map((news, idx) => (
-                <NewsCard newsItem={news} key={idx} />
+                <div className="px-4 md:px-0" key={idx}>
+                  <NewsCard newsItem={news}  />
+                </div>
               ))}
             </ul>
             <div className="mt-8 flex border-t border-gray-100 pl-8 pt-8">

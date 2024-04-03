@@ -7,7 +7,7 @@ import {
 
 export default function Contact() {
   return (
-    <div className="relative isolate lg:mt-20 bg-stone-100">
+    <div className="relative isolate lg:pt-16 bg-stone-100">
       <div className="mx-auto grid max-w-[90rem] grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:pl-16 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -130,7 +130,7 @@ export default function Contact() {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            className=" h-[25rem] lg:h-full grayscale"
+            className=" h-[25rem] lg:h-full "
           ></iframe>
         </div>
       </div>

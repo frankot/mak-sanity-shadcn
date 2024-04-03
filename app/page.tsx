@@ -8,6 +8,7 @@ import LineBreak from "@/components/ui/lineBreak";
 import Kursy from "@/components/kursy";
 import CarouselMobile from "@/components/carouselMobile";
 import CarouselDesktop from "@/components/carouselDeskop";
+import NewsFeatured2 from "@/components/NewsFeatured2";
 
 const ACTIVITIES = [
   {
@@ -50,7 +51,7 @@ const PHOTOS_SLIDES = [
 ];
 export default function Home() {
   return (
-    <div className="">
+    <div className="overscroll-y-contain">
       <Video />
       
       <Ab />
@@ -60,7 +61,8 @@ export default function Home() {
       <Kursy />
 
       <NewsFeatured />
-      <LineBreak />
+      <NewsFeatured2/>
+      {/* <LineBreak /> */}
       {/* <About /> */}
       <CarouselMobile photos={PHOTOS_SLIDES}/>
       <CarouselDesktop photos={PHOTOS_SLIDES}/>

@@ -46,7 +46,7 @@ export default function CarouselDesktop({ className, photos }) {
   return (
     <div
       className={
-        "hidden lg:flex relative mx-auto mb-10 justify-center  pt-20 " +
+        "hidden lg:flex relative mx-auto justify-center  py-20 " +
         className
       }
     >

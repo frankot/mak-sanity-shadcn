@@ -18,9 +18,9 @@ export default function Video() {
     };
   }, []);
   return (
-    <div className=" pb-[94vh] lg:pb-0 lg:mb-[95vh]">
+    <div className="relative h-screen w-screen ">
       <video
-        className="absolute lg:top-0 lg:left-0 z-10 pb-10 lg:pb-0 h-screen w-screen object-cover "
+        className="absolute lg:top-0 lg:left-0 z-10  h-screen w-screen object-cover"
         autoPlay
         muted
         loop
@@ -29,7 +29,9 @@ export default function Video() {
       >
         <source src="/promo-vid.mp4" type="video/mp4" />
       </video>
-      <Image src="/logo-makak.png" width={500} height={500} className="absolute top-20 left-1/3 z-30"/>
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-stone-900 via-gray-900/40" />
+
+      {/* <Image src="/logo-makak.png" width={500} height={500} className="absolute top-20 left-1/3 z-30"/> */}
       <div className="bottom-20 left-1/2 absolute " id="scroll-down-animation">
         <span className={`mouse ${isScrollingDown ? "hideAnim" : ""}`}>
           <span className="move "></span>
