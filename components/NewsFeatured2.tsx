@@ -17,7 +17,8 @@ async function getData() {
 export default async function NewsFeatured2() {
   const news: newsCard[] = await getData();
   return (
-    <div className="container mx-auto my-12">
+    <div className="container  sm:px-10 mx-auto my-12">
+       <h1 className="text-4xl mx-72 w  mt-44 mb-16 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">Aktualności</h1>
       <div className="flex w-full relative isolate">
         <div>
           <svg
@@ -62,7 +63,8 @@ export default async function NewsFeatured2() {
             />
           </div>
         </div>
-        <div className="flex relative bg-stone-100 bg-opacity-70 rounded-3xl hover:bg-white hover:shadow duration-300 group max-h-[70vh] ">
+       
+        <div className="flex relative bg-opacity-70 rounded-3xl bg-white hover:shadow duration-300 group max-h-[70vh] ">
           <div className="w-1/2 relative rounded-l-3xl overflow-hidden ">
             <Image
               src={urlFor(news[0].image).url()}
@@ -108,9 +110,9 @@ export default async function NewsFeatured2() {
           </div>
         </div>
       </div>
-      <div className="grid px-4 sm:px-12  md:px-0 md:grid-cols-2 lg:grid-cols-2 gap-x-8 mt-5  w-full">
+      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-2 gap-x-8 mt-5  w-full">
         {news.slice(1, 5).map((news, idx) => (
-            <NewsCard className="bg-stone-100 bg-opacity-50 " newsItem={news} key={idx}/>   
+            <NewsCard className="bg-white  " newsItem={news} key={idx}/>   
         //   <article
         //     key={news.id}
         //     className="relative isolate group flex flex-col cursor-pointer shadow-xl justify-end overflow-hidden rounded-lg bg-gray-900 px-8 pb-8 pt-80 sm:pt-48"
@@ -145,7 +147,7 @@ export default async function NewsFeatured2() {
         ))}
       </div>
       <Link href="news" className="">
-        <div className=" w-fit px-8 py-1  mx-auto mt-4 font-semibold text-stone-800  rounded bg-orange-400">
+        <div className=" w-fit px-4 text-lg py-3  mx-auto mt-10 font-semibold text-stone-100 uppercase  rounded-full bg-orange-400">
           More news
         </div>
       </Link>

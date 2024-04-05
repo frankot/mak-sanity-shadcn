@@ -1,3 +1,5 @@
+import Activities from "./Activities";
+
 const stats = [
   { label: "Kwadratowych ściany wspinaczkowej", value: "2900 metrów" },
   { label: "Stanowiska", value: "104" },
@@ -116,7 +118,7 @@ export default function ab() {
           </div>
         </div>
       </div>
-
+<Activities/>
       {/* Content section */}
       <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
