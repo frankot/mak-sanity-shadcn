@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import Navbar2 from "@/components/navbar2";
 import Partners from "@/components/partners";
 import Nav2 from "@/components/navbar2";
+import SmoothScrolling from "@/components/SmoothScrolling";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + " bg-stone-100 "}>
-          <Nav2/>
+        <Nav2 />
+        <SmoothScrolling> {children}</SmoothScrolling>
 
-          {children}
-          <Footer />     
+        <Footer />
       </body>
     </html>
   );
