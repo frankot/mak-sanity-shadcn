@@ -52,8 +52,8 @@ export default function Nav2() {
           className="h-28 w-auto"
         />
       </div>
-      <div ref={menuRef} className="fixed z-30  h-full">
-        <button className="m-10 mt-16 ml-0" onClick={toggleMenu}>
+      <div ref={menuRef} className={` fixed z-30  h-full`}>
+        <button className="m-10 mt-16 ml-0 absolute left-14" onClick={toggleMenu}>
           {" "}
           <svg
             data-slot="icon"
@@ -76,9 +76,8 @@ export default function Nav2() {
           </svg>
         </button>
         <div
-          onClick={toggleMenu}
           className={`
-                        h-screen w-[33vw] bg-orange-500 rounded-tr-xl  px-10 py-4 transition-all relative duration-300 flex flex-col justify-between ease-out ${
+                        h-screen w-[33vw]  bg-orange-500  px-10 py-4 transition-all relative duration-300 flex flex-col justify-between ease-out ${
                           isOpen
                             ? "translate-x-0 "
                             : "-translate-x-[32vw] "
@@ -90,7 +89,7 @@ export default function Nav2() {
                 className="hover:translate-x-2 w-fit px-4 py-2 duration-300 transition rounded-xl"
                 key={idx}
               >
-                <Link href={item.href}>{item.name}</Link>
+                <Link onClick={toggleMenu} href={item.href}>{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -103,6 +102,28 @@ export default function Nav2() {
               className="h-20  mx-auto my-10 w-auto"
             />
           </div>
+          <button
+            onClick={toggleMenu}
+            className="absolute bottom-2 right-16 hover:translate-x-2 text-stone-800 duration-300"
+          >
+            {" "}
+            <svg
+              className="h-20"
+              data-slot="icon"
+              aria-hidden="true"
+              fill="none"
+              stroke-width="1.5"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 18 18 6M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
     </>
