@@ -17,8 +17,10 @@ async function getData() {
 export default async function NewsFeatured2() {
   const news: newsCard[] = await getData();
   return (
-    <div className="container  sm:px-10 mx-auto my-12">
-       <h1 className="text-4xl mx-72 w  mt-44 mb-16 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">Aktualności</h1>
+    <div className="container  sm:px-10 mx-auto my-12 mt-44 overflow-x-hidden">
+      {/* <h1 className="text-4xl mx-72 w  mt-44 mb-16 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
+        Aktualności
+      </h1> */}
       <div className="flex w-full relative isolate">
         <div>
           <svg
@@ -63,8 +65,8 @@ export default async function NewsFeatured2() {
             />
           </div>
         </div>
-       
-        <div className="flex relative bg-opacity-70 rounded-3xl bg-white hover:shadow duration-300 group max-h-[70vh] ">
+
+        <div className="flex relative bg-opacity-70  rounded-3xl bg-white hover:shadow duration-300 group max-h-[70vh] ">
           <div className="w-1/2 relative rounded-l-3xl overflow-hidden ">
             <Image
               src={urlFor(news[0].image).url()}
@@ -112,38 +114,38 @@ export default async function NewsFeatured2() {
       </div>
       <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-2 gap-x-8 mt-5  w-full">
         {news.slice(1, 5).map((news, idx) => (
-            <NewsCard className="bg-white  " newsItem={news} key={idx}/>   
-        //   <article
-        //     key={news.id}
-        //     className="relative isolate group flex flex-col cursor-pointer shadow-xl justify-end overflow-hidden rounded-lg bg-gray-900 px-8 pb-8 pt-80 sm:pt-48"
-        //   >
-        //     {/* <img src=url={{$`news.imageUrl`} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" /> */}
-        //     <Image
-        //       src={urlFor(news.image).url()}
-        //       width={500}
-        //       height={500}
-        //       alt=""
-        //       className="-z-10 inset-0 absolute h-full w-full object-cover group-hover:scale-105 duration-200"
-        //     />
-        //     <div className="absolute inset-0 -z-10 bg-gradient-to-t from-stone-900" />
+          <NewsCard className="bg-white  " newsItem={news} key={idx} />
+          //   <article
+          //     key={news.id}
+          //     className="relative isolate group flex flex-col cursor-pointer shadow-xl justify-end overflow-hidden rounded-lg bg-gray-900 px-8 pb-8 pt-80 sm:pt-48"
+          //   >
+          //     {/* <img src=url={{$`news.imageUrl`} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" /> */}
+          //     <Image
+          //       src={urlFor(news.image).url()}
+          //       width={500}
+          //       height={500}
+          //       alt=""
+          //       className="-z-10 inset-0 absolute h-full w-full object-cover group-hover:scale-105 duration-200"
+          //     />
+          //     <div className="absolute inset-0 -z-10 bg-gradient-to-t from-stone-900" />
 
-        //     <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-        //       <time dateTime={news.datetime} className="mr-8">
-        //         {news.date}
-        //       </time>
-        //     </div>
-        //     <h3 className="mb-3 text-lg font-semibold leading-6 text-white">
-        //       <Link href={`/news/${news.currentSlug}`}>
-        //         <span className="absolute inset-0" />
-        //         {news.title}
-        //       </Link>
-        //     </h3>
-        //     <h4 className="text-stone-100">{news.copy}</h4>
-        //     {/* <div className="bg-stone-200 w-full absolute bottom-0 left-0 flex items-center justify-between px-6 py-2 ">
-        //         <div>01.02.24</div>
-        //         <button className="bg-orange-400 px-4 py-1">Czytaj</button>
-        //     </div> */}
-        //   </article>
+          //     <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+          //       <time dateTime={news.datetime} className="mr-8">
+          //         {news.date}
+          //       </time>
+          //     </div>
+          //     <h3 className="mb-3 text-lg font-semibold leading-6 text-white">
+          //       <Link href={`/news/${news.currentSlug}`}>
+          //         <span className="absolute inset-0" />
+          //         {news.title}
+          //       </Link>
+          //     </h3>
+          //     <h4 className="text-stone-100">{news.copy}</h4>
+          //     {/* <div className="bg-stone-200 w-full absolute bottom-0 left-0 flex items-center justify-between px-6 py-2 ">
+          //         <div>01.02.24</div>
+          //         <button className="bg-orange-400 px-4 py-1">Czytaj</button>
+          //     </div> */}
+          //   </article>
         ))}
       </div>
       <Link href="news" className="">

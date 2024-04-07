@@ -32,6 +32,8 @@ export default function Home() {
 
       {/* <NewsFeatured /> */}
       <NewsFeatured2/>
+      <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/>
+
       {/* <LineBreak /> */}
       {/* <About /> */}
       <CarouselMobile photos={PHOTOS_SLIDES}/>
@@ -39,6 +41,7 @@ export default function Home() {
 
      
       <Contact/>
+
       <Partners />
     </div>
   );

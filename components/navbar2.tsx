@@ -5,18 +5,27 @@ import Link from "next/link";
 import { it } from "node:test";
 
 const menuItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
+  { name: "O nas", href: "/" },
+  { name: "Co robimy", href: "/about" },
+  { name: "Cennik", href: "/services" },
+  { name: "Aktualności", href: "/portfolio" },
+  { name: "Inne", href: "/contact" },
+  { name: "Kontakt", href: "/blog" },
+];
+const subItems = [
+  { name: "Regulamin", href: "/regulamin" },
+  { name: "Vouchery", href: "/vouchery" },
 ];
 
 export default function Nav2() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isInne, setIsInne] = useState(false);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+  const toggleInne = () => {
+    setIsInne(!isInne);
   };
   const menuRef = useRef(null);
 
@@ -39,43 +48,47 @@ export default function Nav2() {
 
   return (
     <>
-      <button
-        className={`${isOpen && 'hidden '}  m-10 mt-16 ml-0 fixed left-14 z-40 ` }
-        onClick={toggleMenu}
-      >
-        {" "}
-        <svg
-          data-slot="icon"
-          aria-hidden="true"
-          fill="none"
-          stroke-width="1.5"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`
-             h-16 transition-all duration-300 ease-out ml-2 text-orange-500 bg-stone-800 rounded-full p-2 bg-opacity-50 ${
+      <div className="relative  flex w-full items-center">
+        <button
+          className={`${
+            isOpen && "hidden "
+          }  m-10 mt-24  lg:mt-[90px] ml-0 fixed -top-10 left-14 z-40 `}
+          onClick={toggleMenu}
+        >
+          {" "}
+          <svg
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            className={`
+             h-16 transition-all duration-300 ease-out ml-2 text-orange-500 bg-stone-800 rounded-full p-2 bg-opacity-40 ${
                isOpen ? "" : "-translate-x-10"
              }`}
+          >
+            <path
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+        <div
+          className={`${
+            isOpen ? "opacity-0 " : ""
+          } absolute  transition-all ease-in-out duration-700  top-0 z-30 justify-center mt-10  flex w-full`}
         >
-          <path
-            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
-        </svg>
-      </button>
-      <div
-        className={`${
-          isOpen ? "opacity-0 " : ""
-        } absolute transition-all ease-in-out duration-700  top-0 z-30 justify-center mt-10  flex w-full`}
-      >
-        {" "}
-        <Image
-          src="/logo-makak-horO5.png"
-          height={1000}
-          width={1000}
-          className="h-14 mt-6 ml-4 md:m-0 md:h-20 lg:h-24 w-auto"
-        />
+          {" "}
+          <Image
+            src="/logo-makak-horO5.png"
+            height={1000}
+            width={1000}
+            className="h-14 mt-6 ml-8 md:m-0 md:h-20   w-auto"
+          />
+        </div>
       </div>
       <div
         ref={menuRef}
@@ -86,18 +99,55 @@ export default function Nav2() {
         <div
           className={`
                         h-screen w-[75vw] lg:w-[33vw]  bg-orange-500  px-10 py-4 transition-all relative duration-300 flex flex-col justify-between ease-out ${
-                          isOpen ? "translate-x-0 " : "-translate-x-[73vw] lg:-translate-x-[32vw] "
+                          isOpen
+                            ? "translate-x-0 "
+                            : "-translate-x-[73vw] lg:-translate-x-[32vw] "
                         }`}
         >
-          <ul className="flex flex-col gap-y-3 text-stone-800 tracking-tighter uppercase font-semibold py-10 pr-5 text-xl">
+          <ul className="flex flex-col gap-y-2 text-black tracking-tighter capitalize font-semibold py-16 pr-5 text-2xl">
             {menuItems.map((item, idx) => (
               <li
-                className="hover:translate-x-2 w-fit px-4 py-2 duration-300 transition rounded-xl"
+                className="hover:translate-x-2  w-fit px-4 py-2 duration-300 transition rounded-xl"
                 key={idx}
               >
-                <Link onClick={toggleMenu} href={item.href}>
-                  {item.name}
-                </Link>
+                {item.name === "Inne" ? (
+                  <div>
+                    <button onClick={toggleInne} className="flex items-center ">
+                      <span>Inne</span>
+                      <svg
+                        className="h-6"
+                        data-slot="icon"
+                        aria-hidden="true"
+                        fill="none"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>{" "}
+                    </button>
+                    <div
+                      className={`${
+                        isInne ? "translate-x-0 " : "hidden -translate-x-44"
+                      } flex duration-1000 transition-all ease-in-out ml-2 gap-y-2 text-md text-stone-700 flex-col`}
+                    >
+                      {subItems.map((inn, idx) => (
+                        <Link key={idx} onClick={toggleMenu} href={item.href}>
+                          {inn.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link onClick={toggleMenu} href={item.href}>
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
