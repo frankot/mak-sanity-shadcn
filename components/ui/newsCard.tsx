@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NewsCard({ className ,newsItem }) {
   return (
-    <li className={className+" my-4  rounded-2xl flex  duration-300 border hover:shadow-xl  hover:bg-white z-10"} >
+    <li className={className+" my-4  rounded-2xl flex  duration-300 border hover:shadow-xl  hover:bg-stone-100 z-10"} >
       <div className="h-[180px] w-[130px] lg:w-[160px] lg:h-[220px]  flex-shrink-0">
         <Image
           src={urlFor(newsItem.image).url()}

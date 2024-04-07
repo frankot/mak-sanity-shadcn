@@ -2,6 +2,7 @@ import { client, urlFor } from "@/lib/sanity";
 import { newsCard } from "@/lib/interface";
 import Image from "next/image";
 import Link from "next/link";
+import Title from "./ui/title";
 import NewsCard from "./ui/newsCard";
 async function getData() {
   const query = `*[_type == 'newsArticle'] | order(_createdAt asc){
@@ -17,10 +18,12 @@ async function getData() {
 export default async function NewsFeatured2() {
   const news: newsCard[] = await getData();
   return (
-    <div className="container  sm:px-10 mx-auto my-12 mt-44 overflow-x-hidden">
+    <div className="  sm:px-10 mx-auto pt-10 my-12 mt-44 overflow-x-hidden">
       {/* <h1 className="text-4xl mx-72 w  mt-44 mb-16 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
         Aktualności
       </h1> */}
+              <Title title="Aktualności"/>
+
       <div className="flex w-full relative isolate">
         <div>
           <svg
@@ -66,21 +69,21 @@ export default async function NewsFeatured2() {
           </div>
         </div>
 
-        <div className="flex relative bg-opacity-70  rounded-3xl bg-white hover:shadow duration-300 group max-h-[70vh] ">
+        <div className="flex md:flex-row relative bg-opacity-10  rounded-3xl  bg-stone-800 hover:bg-stone-100 duration-500 group max-h-[70vh] ">
           <div className="w-1/2 relative rounded-l-3xl overflow-hidden ">
             <Image
               src={urlFor(news[0].image).url()}
               height={1500}
               width={1500}
               alt="Featured news image"
-              className="h-full rounded-l-3xl object-cover  group-hover:scale-105 duration-200"
+              className="h-full  object-cover  group-hover:scale-105 duration-200"
             />{" "}
             {/* <div className="inset-0 h-full w-full absolute  bg-stone-600 opacity-15 hover:opacity-0 duration-500"></div> */}
           </div>
           <div className="w-1/2 shadow-xl p-20 ">
             {/* <hr className=" h-1 bg-orange-400 mx-4 mb-2   " /> */}
 
-            <h1 className="font-bold leading-10 tracking-tighter text-5xl text-stone-900">
+            <h1 className="font-bold leading-10 tracking-tighter text-5xl text-stone-800">
               {news[0].title}
             </h1>
             <hr className=" h-1 bg-orange-400  mt-2" />
@@ -112,9 +115,9 @@ export default async function NewsFeatured2() {
           </div>
         </div>
       </div>
-      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-2 gap-x-8 mt-5  w-full">
+      <div className="grid px-4 sm:px-12 pt-10  md:px-0 grid-cols-1 lg:grid-cols-2 gap-x-8 mt-5  w-full">
         {news.slice(1, 5).map((news, idx) => (
-          <NewsCard className="bg-white  " newsItem={news} key={idx} />
+          <NewsCard className="bg-opacity-10  bg-stone-800 " newsItem={news} key={idx} />
           //   <article
           //     key={news.id}
           //     className="relative isolate group flex flex-col cursor-pointer shadow-xl justify-end overflow-hidden rounded-lg bg-gray-900 px-8 pb-8 pt-80 sm:pt-48"

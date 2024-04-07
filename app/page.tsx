@@ -10,7 +10,8 @@ import CarouselMobile from "@/components/carouselMobile";
 import CarouselDesktop from "@/components/carouselDeskop";
 import NewsFeatured2 from "@/components/NewsFeatured2";
 import Contact from "@/components/contact";
-
+import NewsFeatured3 from "@/components/newsFeatured3";
+import Title from "@/components/ui/title";
 
 const PHOTOS_SLIDES = [
   "/Slideshow/s1.jpg",
@@ -32,6 +33,8 @@ export default function Home() {
 
       {/* <NewsFeatured /> */}
       <NewsFeatured2/>
+      <NewsFeatured/>
+      <NewsFeatured3/>
       <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/>
 
       {/* <LineBreak /> */}
