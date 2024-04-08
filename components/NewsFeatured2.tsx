@@ -22,7 +22,7 @@ export default async function NewsFeatured2() {
       {/* <h1 className="text-4xl mx-72 w  mt-44 mb-16 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
         Aktualności
       </h1> */}
-              <Title title="Aktualności"/>
+      <Title title="Aktualności" />
 
       <div className="flex w-full relative isolate">
         <div>
@@ -68,8 +68,9 @@ export default async function NewsFeatured2() {
             />
           </div>
         </div>
-
-        <div className="flex md:flex-row relative bg-opacity-10  rounded-3xl  bg-stone-800 hover:bg-stone-100 duration-500 group max-h-[70vh] ">
+  
+        <div className="flex hover:skew-y-1 relative bg-opacity-10  rounded-3xl  bg-stone-800 hover:bg-opacity-20 duration-500 group max-h-[70vh] ">
+      
           <div className="w-1/2 relative rounded-l-3xl overflow-hidden ">
             <Image
               src={urlFor(news[0].image).url()}
@@ -117,7 +118,11 @@ export default async function NewsFeatured2() {
       </div>
       <div className="grid px-4 sm:px-12 pt-10  md:px-0 grid-cols-1 lg:grid-cols-2 gap-x-8 mt-5  w-full">
         {news.slice(1, 5).map((news, idx) => (
-          <NewsCard className="bg-opacity-10  bg-stone-800 " newsItem={news} key={idx} />
+          <NewsCard
+            className=""
+            newsItem={news}
+            key={idx}
+          />
           //   <article
           //     key={news.id}
           //     className="relative isolate group flex flex-col cursor-pointer shadow-xl justify-end overflow-hidden rounded-lg bg-gray-900 px-8 pb-8 pt-80 sm:pt-48"

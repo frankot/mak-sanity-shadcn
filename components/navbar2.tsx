@@ -76,6 +76,24 @@ export default function Nav2() {
             ></path>
           </svg>
         </button>
+        <button className="absolute right-14 top-[90vh] z-50">
+          <svg
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            stroke-width="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-16 text-orange-500 bg-stone-800 animate-bounce  rounded-full p-2 bg-opacity-40 "
+          >
+            <path
+              d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
         <div
           className={`${
             isOpen ? "opacity-0 " : ""

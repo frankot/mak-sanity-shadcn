@@ -25,16 +25,10 @@ export default function Home() {
     <div className="overscroll-y-contain">
       <Video />
       
-      {/* <Activities /> */}
       <Ab />
 
-      {/* <LineBreak /> */}
-      {/* <  /> */}
-
-      {/* <NewsFeatured /> */}
       <NewsFeatured2/>
-      <NewsFeatured/>
-      <NewsFeatured3/>
+]
       <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/>
 
       {/* <LineBreak /> */}

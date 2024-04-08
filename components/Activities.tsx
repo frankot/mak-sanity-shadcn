@@ -53,7 +53,7 @@ export default function Activities() {
             />
             <div className="mt-6 grid grid-flow-col place-items-center">
               <svg
-                className=" mr-2 h-4"
+                className=" pr-3 h-4 fill-orange-500"
                 xmlns="http://www.w3.org/2000/svg"
                 id="Filled"
                 viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ export default function Activities() {
                 <path d="M20.492,7.969,10.954.975A5,5,0,0,0,3,5.005V19a4.994,4.994,0,0,0,7.954,4.03l9.538-6.994a5,5,0,0,0,0-8.062Z" />
               </svg>
 
-              <div className="font-semibold  uppercase tracking-widest">
+              <div className="font-semibold  capitalize tracking-wide text-lg">
                 {act.name}
               </div>
             </div>

@@ -11,7 +11,7 @@ export default function ab() {
     <main className="isolate ">
       <div className="relative isolate -z-10">
         <svg
-          className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+          className="absolute inset-x-0 top-0 -z-10 h-[200vh] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
           aria-hidden="true"
         >
           <defs>
@@ -51,12 +51,14 @@ export default function ab() {
             }}
           />
         </div>
-        <div className="overflow-hidden">
-          <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+
+        <div className="overflow-hidden ">
+          <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8  lg:pl-10 lg:pt-32">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <h1 className="text-4xl font-bold tracking-tight text-orange-500 sm:text-6xl">
-                Największy rejon wspinaczkowy na mazowszu!              </h1>
+                  Największy rejon wspinaczkowy na mazowszu!{" "}
+                </h1>
                 <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                   Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
                   quis cupidatat mollit aute velit. Et labore commodo nulla
@@ -117,56 +119,58 @@ export default function ab() {
             </div>
           </div>
         </div>
-      </div>
-<Activities/>
-      {/* Content section */}
-      <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h2 className="text-3xl font-bold tracking-tight text-orange-500 sm:text-4xl">
-            Wspinanie jest dla wszystkich
-          </h2>
-          <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
-            <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-              <p className="text-xl leading-8 text-gray-600">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas ac. Diam nulla orci at in viverra
-                scelerisque eget. Eleifend egestas fringilla sapien.
-              </p>
-              <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
-                <p>
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                  risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                  Id dolor praesent donec est. Odio penatibus risus viverra
-                  tellus varius sit neque erat velit. Faucibus commodo massa
-                  rhoncus, volutpat. Dignissim sed eget risus enim. Mattis
-                  mauris semper sed amet vitae sed turpis id.
+
+        <Activities />
+        {/* Content section */}
+
+        <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8 lg:ml-16">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+            <h2 className="text-3xl font-bold tracking-tight text-orange-500 sm:text-4xl">
+              Wspinanie jest dla wszystkich
+            </h2>
+            <div className="mt-6 flex flex-col gap-x-8  gap-y-20 lg:flex-row">
+              <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
+                <p className="text-xl leading-8 text-gray-600">
+                  Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
+                  sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
+                  id at vitae feugiat egestas ac. Diam nulla orci at in viverra
+                  scelerisque eget. Eleifend egestas fringilla sapien.
                 </p>
-                <p className="mt-10">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien
-                  duis odio id et. Id blandit molestie auctor fermentum
-                  dignissim. Lacus diam tincidunt ac cursus in vel. Mauris
-                  varius vulputate et ultrices hac adipiscing egestas. Iaculis
-                  convallis ac tempor et ut. Ac lorem vel integer orci.
-                </p>
+                <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
+                  <p>
+                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                    risus enim. Mattis mauris semper sed amet vitae sed turpis
+                    id. Id dolor praesent donec est. Odio penatibus risus
+                    viverra tellus varius sit neque erat velit. Faucibus commodo
+                    massa rhoncus, volutpat. Dignissim sed eget risus enim.
+                    Mattis mauris semper sed amet vitae sed turpis id.
+                  </p>
+                  <p className="mt-10">
+                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien
+                    duis odio id et. Id blandit molestie auctor fermentum
+                    dignissim. Lacus diam tincidunt ac cursus in vel. Mauris
+                    varius vulputate et ultrices hac adipiscing egestas. Iaculis
+                    convallis ac tempor et ut. Ac lorem vel integer orci.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="lg:flex lg:flex-auto lg:justify-center ml-10 md:ml-0">
-              <dl className="w-64 space-y-8 xl:w-80">
-                {stats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="flex flex-col-reverse gap-y-4 "
-                  >
-                    <dt className="text-base leading-7 text-gray-600">
-                      {stat.label}
-                    </dt>
-                    <dd className="text-5xl font-semibold tracking-tight text-orange-500">
-                      {stat.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <div className="lg:flex lg:flex-auto lg:justify-center ml-10 md:ml-0">
+                <dl className="w-64 space-y-8 xl:w-80">
+                  {stats.map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="flex flex-col-reverse gap-y-4 "
+                    >
+                      <dt className="text-base  leading-7 text-stone-900">
+                        {stat.label}
+                      </dt>
+                      <dd className="text-5xl font-semibold tracking-tight text-orange-500">
+                        {stat.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </div>
           </div>
         </div>

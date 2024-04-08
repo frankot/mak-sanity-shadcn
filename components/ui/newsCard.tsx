@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function NewsCard({ className ,newsItem }) {
   return (
-    <li className={className+" my-4  rounded-2xl flex  duration-300 border hover:shadow-xl  hover:bg-stone-100 z-10"} >
+    <li className={className+" my-4  rounded-2xl flex  duration-300 z-10 bg-opacity-10  bg-stone-800 hover:bg-opacity-20 hover:skew-y-1"} >
       <div className="h-[180px] w-[130px] lg:w-[160px] lg:h-[220px]  flex-shrink-0">
         <Image
           src={urlFor(newsItem.image).url()}
@@ -24,15 +24,15 @@ export default function NewsCard({ className ,newsItem }) {
           <hr className="my-2 mr-24 h-px  border-none bg-orange-400" />
         </dd>
         <dt className="sr-only">Description</dt>
-        <dd className=" px-1 w-full  flex-none text-base leading-7 text-gray-600">
+        <dd className=" px-2 pr-10 w-full  flex-none text-base leading-7 text-gray-600">
           <div className=" line-clamp-2 lg:line-clamp-3"> {newsItem.copy}</div>
         </dd>
         <dt className="sr-only">Date</dt>
-        <div className="relative w-full h-1/5 mb-2">
-          <dd className="mt-4 absolute  bottom-0 text-sm  leading-7 text-gray-500">
+        <div className=" w-full h-1/5 mb-2">
+          <dd className="mt-4 absolute  bottom-2 text-sm  leading-7 text-gray-500">
             01.02.2024
           </dd>
-          <button className="absolute uppercase bottom-0 right-5 inline-flex items-center rounded-full bg-orange-400 px-3 py-2 text-center text-xs lg:text-sm font-medium text-white ">
+          <button className="absolute uppercase bottom-4 right-5 inline-flex items-center rounded-full bg-orange-400 px-3 py-2 text-center text-xs lg:text-sm font-medium text-white ">
             {" "}
             read more
             <svg
