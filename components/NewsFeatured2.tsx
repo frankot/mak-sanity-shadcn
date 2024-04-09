@@ -26,7 +26,7 @@ export default async function NewsFeatured2() {
       <Title title="Aktualności" />
 
       <div className="flex w-full relative isolate">
-        <div>
+        {/* <div>
           <svg
             className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
             aria-hidden="true"
@@ -68,10 +68,12 @@ export default async function NewsFeatured2() {
               }}
             />
           </div>
-        </div>
-  
+        </div> */}
+
+
+
+        {/* 
         <div className="flex hover:skew-y-1 relative bg-opacity-10  rounded-3xl  bg-stone-800 hover:bg-opacity-20 duration-500 group max-h-[70vh] ">
-      
           <div className="w-1/2 relative rounded-l-3xl overflow-hidden ">
             <Image
               src={urlFor(news[0].image).url()}
@@ -80,10 +82,8 @@ export default async function NewsFeatured2() {
               alt="Featured news image"
               className="h-full  object-cover  group-hover:scale-105 duration-200"
             />{" "}
-            {/* <div className="inset-0 h-full w-full absolute  bg-stone-600 opacity-15 hover:opacity-0 duration-500"></div> */}
           </div>
           <div className="w-1/2 shadow-xl p-20 ">
-            {/* <hr className=" h-1 bg-orange-400 mx-4 mb-2   " /> */}
 
             <h1 className="font-bold leading-10 tracking-tighter text-5xl text-stone-800">
               {news[0].title}
@@ -115,15 +115,11 @@ export default async function NewsFeatured2() {
               </svg>
             </button>{" "}
           </div>
-        </div>
+        </div> */}
       </div>
-      <div className="grid px-4 sm:px-12 pt-10  md:px-0 grid-cols-1 lg:grid-cols-3 gap-8 mt-5  w-full">
-        {news.slice(1, 4).map((news, idx) => (
-          <NewsCard2
-        
-            newsItem={news}
-            key={idx}
-          />
+      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-3 gap-8  w-full">
+        {news.slice(0, 3).map((news, idx) => (
+          <NewsCard2 newsItem={news} key={idx} />
           //   <article
           //     key={news.id}
           //     className="relative isolate group flex flex-col cursor-pointer shadow-xl justify-end overflow-hidden rounded-lg bg-gray-900 px-8 pb-8 pt-80 sm:pt-48"

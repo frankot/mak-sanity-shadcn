@@ -18,8 +18,6 @@ export default function CarouselDesktop({ className, photos }) {
             behavior: "smooth",
           });
         } else {
-          console.log(nextScrollLeft);
-          console.log(container.scrollWidth);
           container.scrollTo({
             left: nextScrollLeft,
             behavior: "smooth",
