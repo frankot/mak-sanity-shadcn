@@ -28,7 +28,6 @@ export default function Home() {
       <Ab />
 
       <NewsFeatured2/>
-]
       <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/>
 
       {/* <LineBreak /> */}

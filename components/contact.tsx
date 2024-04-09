@@ -122,7 +122,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="rounded-xl flex">
+        <div className="rounded-xl flex m-10 lg:m-0 lg:mr-10">
           {" "}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.0388414660847!2d20.903975876884143!3d52.29714947200356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eca1c891bf83f%3A0x30bc9294aae1478a!2sArena%20Wspinaczkowa%20Makak!5e0!3m2!1sen!2spl!4v1711355395276!5m2!1sen!2spl"
@@ -131,7 +131,7 @@ export default function Contact() {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            className=" h-[25rem] lg:h-[32rem] grayscale my-auto"
+            className=" h-[25rem] lg:h-[32rem]  my-auto"
           ></iframe>
         </div>
       </div>{" "}

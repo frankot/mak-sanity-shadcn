@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Title from "./ui/title";
 import NewsCard from "./ui/newsCard";
+import NewsCard2 from "./ui/newsCard2";
 async function getData() {
   const query = `*[_type == 'newsArticle'] | order(_createdAt asc){
       title,
@@ -18,7 +19,7 @@ async function getData() {
 export default async function NewsFeatured2() {
   const news: newsCard[] = await getData();
   return (
-    <div className="  sm:px-10 mx-auto pt-10 my-12 mt-44 overflow-x-hidden">
+    <div className="px-6  sm:px-10 md:px-24 mx-auto pt-10 my-12 mt-44 overflow-x-hidden">
       {/* <h1 className="text-4xl mx-72 w  mt-44 mb-16 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
         Aktualności
       </h1> */}
@@ -116,10 +117,10 @@ export default async function NewsFeatured2() {
           </div>
         </div>
       </div>
-      <div className="grid px-4 sm:px-12 pt-10  md:px-0 grid-cols-1 lg:grid-cols-2 gap-x-8 mt-5  w-full">
-        {news.slice(1, 5).map((news, idx) => (
-          <NewsCard
-            className=""
+      <div className="grid px-4 sm:px-12 pt-10  md:px-0 grid-cols-1 lg:grid-cols-3 gap-8 mt-5  w-full">
+        {news.slice(1, 4).map((news, idx) => (
+          <NewsCard2
+        
             newsItem={news}
             key={idx}
           />
