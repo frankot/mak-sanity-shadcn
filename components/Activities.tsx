@@ -61,7 +61,7 @@ export default function Activities() {
                 <path d="M20.492,7.969,10.954.975A5,5,0,0,0,3,5.005V19a4.994,4.994,0,0,0,7.954,4.03l9.538-6.994a5,5,0,0,0,0-8.062Z" />
               </svg>
 
-              <div className="font-semibold  capitalize tracking-wide text-lg">
+              <div className="font-semibold tracking-wide uppercase text-lg">
                 {act.name}
               </div>
             </div>

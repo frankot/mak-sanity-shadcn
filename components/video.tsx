@@ -18,8 +18,8 @@ export default function Video() {
     };
   }, []);
   return (
-    <div className="video-background relative h-screen w-screen  ">
-      {/* <video
+    <div className="video-backgroun relative h-screen w-screen  ">
+      <video
         className="absolute lg:top-0 lg:left-0 z-10  h-screen w-screen object-cover"
         autoPlay
         loop
@@ -27,13 +27,13 @@ export default function Video() {
         preload="auto"
       >
         <source src="/promo-vid.mp4" type="video/mp4" />
-      </video> */}
-      <iframe
+      </video>
+      {/* <iframe
         src="https://player.vimeo.com/video/932368948?background=1"
         width="640"
         height="360"
         allow="autoplay; fullscreen"
-      ></iframe>
+      ></iframe> */}
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-stone-900 via-gray-900/40" />
 
       {/* <Image src="/logo-makak.png" width={500} height={500} className="absolute top-20 left-1/3 z-30"/> */}

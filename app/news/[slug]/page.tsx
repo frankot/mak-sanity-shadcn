@@ -32,7 +32,7 @@ export default async function NewsArticle({
     //   </div>
     // </div>
     <div className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
-      <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/>
+      <hr className="h-1 bg-orange-400 mt-16 m-10 lg:mb-20 lg:mx-20" />
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
@@ -51,7 +51,7 @@ export default async function NewsArticle({
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-10 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           {/* <img
           className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
           src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
@@ -59,7 +59,7 @@ export default async function NewsArticle({
         /> */}
           <Image
             src={urlFor(data.image).url()}
-            className="mx-auto"
+            className="ml-5 lg:ml-0"
             height={500}
             width={500}
             alt="ssdsad"

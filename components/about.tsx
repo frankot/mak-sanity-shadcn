@@ -44,11 +44,11 @@ export default function About() {
                   żeby wielkość panelu i charakter wspinania przypominały
                   najlepsze rejony wspinaczkowe Europy. Na warszawskie Bielany
                   udało nam się przenieść niemal wszystkie formacje skalne
-                  występujące w przyrodzie. Mamy „zacięcia”, "kanty",
-                  „przewieszki”, „filary”, "połogi" i imponujący „dach"
+                  występujące w przyrodzie. Mamy „zacięcia”, kanty,
+                  „przewieszki”, „filary”, połogi i imponujący dach
                   zaprojektowany na całej szerokości hali. W pierwszej hali z
                   liną znajdziecie ponad 200 dróg o różnym stopniu trudności. Co
-                  tydzień/dwa zdejmujemy i kręcimy nowe. Żeby nie było nudno :-)
+                  tydzień/dwa zdejmujemy i kręcimy nowe. Żeby nie było nudno 
                 </p>
                 <ul role="list" className="mt-8 space-y-8 text-gray-600">
                   <li className="flex gap-x-3">
@@ -100,7 +100,7 @@ export default function About() {
                   nieogranicznone możliwości treningowe. Makak jest ścianą
                   przyjazną zarówno początkującym jak i zaawansowanym
                   wspinaczom. Dzieciom (odkąd potrafią chodzić), dorosłym i
-                  seniorom. 7 dni w tygodniu, "świątek piątek", latem i zimą.
+                  seniorom. 7 dni w tygodniu, świątek piątek, latem i zimą.
                 </p>
                 <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
                   Wspinanie jest dla wszystkich!
@@ -108,7 +108,7 @@ export default function About() {
                 <p className="mt-6">
                   Tych, którzy dopiero zaczynają się wspinać, na Makaku, uczymy
                   bezpiecznej asekuracji, technik wspinaczkowych i
-                  wspinaczkowego savoir-vivre'u. Zaawansowani wspinacze mają do
+                  wspinaczkowego savoir-vivreu. Zaawansowani wspinacze mają do
                   dyspozycji stale zmieniający się zestaw dróg o urozmaiconych
                   trudnościach, od 4 (bardzo łatwo) nawet do 8c (ekstremalnie
                   trudno; wyceny według tzw. francuskiej skali trudności
@@ -118,7 +118,7 @@ export default function About() {
                   wspinaczki, mamy urządzenia do autoasekuracji - taśmy, na
                   których można wspinać się w pojedynkę. Jest też ścianka
                   zaprojektowana z myślą o dzieciach, nawet tych najmłodszych
-                  (3+) oraz plac zabaw z "mysią dziurą" i zjeżdzalniami.
+                  (3+) oraz plac zabaw z mysią dziurą i zjeżdzalniami.
                 </p>
               </div>
             </div>

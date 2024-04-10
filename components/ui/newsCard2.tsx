@@ -1,19 +1,21 @@
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity";
+import Link from "next/link";
 export default function NewsCard2({ newsItem }) {
   return (
-    <div className="rounded-2xl flex flex-col h-[475px] bg-opacity-[.15] group  bg-stone-800 hover:bg-opacity-10 duration-300 shadow-lg">
+    <Link href={`/news/${newsItem.currentSlug}`}>
+    <div className="rounded-2xl flex flex-col h-[475px] bg-opacity-[.15] hover:bg-white hover:scale-[1.05] duration-300 shadow-lg">
       <div className="relative w-full h-3/5 ">
         <Image
           src={urlFor(newsItem.image).url()}
           fill={true}
           alt="Image of news article"
           sizes="23vh"
-          className="object-cover rounded-t-2xl opacity-90 duration-300 group-hover:opacity-100"
+          className="object-cover rounded-t-2xl"
         />
       </div>
       <div className="p-4 relative h-2/5 overflow-hidden">
-        <h1 className="line-clamp-1 text-lg text-stone-900 font-semibold">{newsItem.title}</h1>
+        <h1 className="line-clamp-1 text-lg text-stone-900 font-bold">{newsItem.title}</h1>
         <hr className="h-[3px] bg-orange-400 " />
         <p className="mt-4 line-clamp-3 text-stone-800">{newsItem.copy}</p>
         <button className="absolute uppercase bottom-3 right-3 inline-flex items-center rounded-full bg-orange-400 px-3 py-2 text-center text-xs lg:text-sm font-medium text-white ">
@@ -38,5 +40,6 @@ export default function NewsCard2({ newsItem }) {
         <span className="absolute bottom-4 left-3 text-stone-700">24.03.23</span>
       </div>
     </div>
+    </Link>
   );
 }
