@@ -28,12 +28,13 @@ export default function Home() {
       <Ab />
 
       <NewsFeatured2/>
-      <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/>
+      {/* <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/> */}
 
       {/* <LineBreak /> */}
       {/* <About /> */}
       <CarouselMobile photos={PHOTOS_SLIDES}/>
       <CarouselDesktop photos={PHOTOS_SLIDES}/>
+      <hr className="h-2   w-screen bg-orange-500  mb-6" />
 
      
       <Contact/>

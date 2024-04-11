@@ -26,9 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={k2d.className + " bg-stone-100 "}>
+      <body className={k2d.className + " bg-stone-100 scroll-smooth"}>
         <Nav2 />
-        <SmoothScrolling> {children}</SmoothScrolling>
+        {children}
 
         <Footer />
       </body>

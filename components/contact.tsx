@@ -46,7 +46,7 @@ export default function Contact() {
                 </svg>
               </div> */}
 
-            <h2 className="text-3xl font-bold tracking-tight text-orange-400">
+            <h2 className="text-3xl font-bold tracking-tight text-orange-500">
               Skontaktuj się z nami
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -60,7 +60,7 @@ export default function Contact() {
                   <dt className="flex-none">
                     <span className="sr-only">Address</span>
                     <BuildingOffice2Icon
-                      className="h-7 w-6 text-orange-400"
+                      className="h-7 w-6 text-orange-500"
                       aria-hidden="true"
                     />
                   </dt>
@@ -73,7 +73,7 @@ export default function Contact() {
                   <dt className="flex-none">
                     <span className="sr-only">Telephone</span>
                     <PhoneIcon
-                      className="h-7 w-6 text-orange-400"
+                      className="h-7 w-6 text-orange-500"
                       aria-hidden="true"
                     />
                   </dt>
@@ -90,7 +90,7 @@ export default function Contact() {
                   <dt className="flex-none">
                     <span className="sr-only">Email</span>
                     <EnvelopeIcon
-                      className="h-7 w-6 text-orange-400"
+                      className="h-7 w-6 text-orange-500"
                       aria-hidden="true"
                     />
                   </dt>
@@ -104,8 +104,8 @@ export default function Contact() {
                   </dd>
                 </div>
               </dl>
-              <div className="mt-10 lg:ml-10 lg:pl-10 ml-5 pl-5 border-orange-400 border-l space-y-4 text-base leading-7 text-gray-600">
-                <div className=" font-bold text-orange-400 flex items-center -ml-2 lg:-ml-6 ">
+              <div className="mt-10 lg:ml-10 lg:pl-10 ml-5 pl-5 border-orange-500 border-l space-y-4 text-base leading-7 text-gray-600">
+                <div className=" font-bold text-orange-500 flex items-center -ml-2 lg:-ml-6 ">
                   {" "}
                   <ClockIcon className="h-6 mr-2" aria-hidden="true" />
                   <p>Godziny Otwarcia</p>
@@ -122,7 +122,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="rounded-xl flex m-10 lg:m-0 lg:mr-10">
+        <div className="rounded-xl flex m-10 lg:m-0 lg:mr-10 relative">
           {" "}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.0388414660847!2d20.903975876884143!3d52.29714947200356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eca1c891bf83f%3A0x30bc9294aae1478a!2sArena%20Wspinaczkowa%20Makak!5e0!3m2!1sen!2spl!4v1711355395276!5m2!1sen!2spl"
@@ -131,7 +131,7 @@ export default function Contact() {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            className=" h-[25rem] lg:h-[32rem]  my-auto"
+            className=" h-[25rem] lg:h-[32rem]  my-auto  border-[6px] rounded-lg border-orange-500"
           ></iframe>
         </div>
       </div>{" "}

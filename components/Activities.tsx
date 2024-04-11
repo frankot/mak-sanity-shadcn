@@ -39,6 +39,7 @@ export default function Activities() {
       {/* <Title title="Aktywności" subtitle="Jako możesz się u nas bawić?" /> */}
       <div className=" flex flex-wrap justify-center gap-10 lg:gap-16 items-center ">
         {ACTIVITIES.map((act) => (
+          
           <div
             key={act.id}
             className="lg:hover:scale-110 transform duration-300 grid place-items-center  rounded-xl p-4"

@@ -38,3 +38,8 @@
     width: 177.78vh;
   }
 }
+
+    .mag {
+      animation: spin linear both;
+      animation-timeline: scroll();
+    }

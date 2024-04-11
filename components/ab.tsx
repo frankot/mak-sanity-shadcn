@@ -124,7 +124,7 @@ export default function ab() {
         {/* Content section */}
 
         <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8 lg:ml-16">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+          <div className="mx-auto max-w-2xl xl:ml-10 lg:mx-0 lg:max-w-none">
             <h2 className="text-3xl font-bold tracking-tight text-orange-500 sm:text-4xl">
               Wspinanie jest dla wszystkich
             </h2>

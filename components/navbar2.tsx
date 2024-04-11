@@ -2,7 +2,8 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { it } from "node:test";
+import { usePathname } from "next/navigation";
+import { log } from "console";
 
 const menuItems = [
   { name: "O nas", href: "/" },
@@ -20,6 +21,28 @@ const subItems = [
 export default function Nav2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInne, setIsInne] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const threshold = 400; 
+      const scrolled = window.scrollY;
+      if (scrolled > threshold) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); //
+
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -30,17 +53,12 @@ export default function Nav2() {
   const menuRef = useRef(null);
 
   useEffect(() => {
-    // Function to close menu when clicking outside
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     }
-
-    // Add event listener when component mounts
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Clean up event listener when component unmounts
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -49,34 +67,37 @@ export default function Nav2() {
   return (
     <>
       <div className="relative  flex w-full items-center">
-        <button
-          className={`${
-            isOpen && "hidden "
-          }  m-10 mt-24  lg:mt-[90px] ml-0 fixed -top-10 left-14 z-40 `}
-          onClick={toggleMenu}
-        >
-          {" "}
-          <svg
-            data-slot="icon"
-            aria-hidden="true"
-            fill="none"
-            stroke-width="1.5"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            className={`
-             h-16 transition-all duration-300 ease-out ml-2 text-orange-500 bg-stone-800 rounded-full p-2 bg-opacity-40 ${
-               isOpen ? "" : "-translate-x-10"
-             }`}
+        {pathname === "/" ? (
+          <button
+            className={`${isOpen && "hidden "}  m-10 mt-24 lg:mt-[90px] ml-0 fixed -top-10 left-14 z-40 `}
+            onClick={toggleMenu}
           >
-            <path
-              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            ></path>
-          </svg>
-        </button>
-        <button className="absolute right-14 top-[90vh] z-50">
+            {" "}
+            <svg
+              data-slot="icon"
+              aria-hidden="true"
+              fill="none"
+              stroke-width="1.5"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-16  ml-2 text-orange-500 bg-stone-800 rounded-full p-2 bg-opacity-40 
+  "
+            >
+              <path
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </button>
+        ) : (
+          <button></button>
+        )}
+
+        <button className={ `${
+              isScrolled && " rotate-180 "
+            } fixed right-4 top-[90vh] z-50 duration-1000`}>
           <svg
             data-slot="icon"
             aria-hidden="true"
@@ -85,7 +106,7 @@ export default function Nav2() {
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-16 text-orange-500 bg-stone-800 animate-bounce  rounded-full p-2 bg-opacity-40 "
+            className="h-16 text-orange-500 bg-stone-800 rounded-full p-2 bg-opacity-40 "
           >
             <path
               d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
@@ -116,7 +137,7 @@ export default function Nav2() {
       >
         <div
           className={`
-                        h-screen w-[75vw] lg:w-[33vw]  bg-orange-500  px-10 py-4 transition-all relative duration-300 flex flex-col justify-between ease-out ${
+                        h-screen w-[75vw] lg:w-[33vw]  bg-orange-500  px-10 py-4 transition-all relative duration-500 flex flex-col justify-between ease-out ${
                           isOpen
                             ? "translate-x-0 "
                             : "-translate-x-[73vw] lg:-translate-x-[32vw] "

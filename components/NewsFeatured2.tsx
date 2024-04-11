@@ -117,7 +117,7 @@ export default async function NewsFeatured2() {
           </div>
         </div> */}
       </div>
-      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-3 gap-8  w-full">
+      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-6xl mx-auto gap-8  w-full">
         {news.slice(0, 3).map((news, idx) => (
           <NewsCard2 newsItem={news} key={idx} />
           //   <article
