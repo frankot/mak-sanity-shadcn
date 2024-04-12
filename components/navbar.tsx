@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <div className="fixed top-0 w-full z-50 ">
       <header
-        className={`flex h-16 shrink-0 mx-24 mt-2 rounded-full  borsder bg-opacity-90 border-orange-400 items-center text-white px-4 md:px-12 duration-1000    ${
+        className={`flex h-16 shrink-0 mx-24 mt-4 rounded-full  borsder bg-opacity-90 border-orange-400 items-center text-white px-4 md:px-12 duration-1000    ${
           isScrollingDown && onHeroPage
             ? "bg-opacity-100 bg-stone-800 shadow text-stone-100"
             : "bg-opacity-0"
@@ -93,7 +93,7 @@ export function Navbar() {
           </SheetContent>
         </Sheet>
         {/* DESKTOP NAV */}
-        <Link className="mr-6 hidden lg:flex" href="#">
+        <Link className="mr-6  hidden lg:flex" href="#">
           <span className="sr-only">Acme Inc</span>
         </Link>
         <div className="w-full flex justify-center lg:justify-between">
@@ -101,20 +101,20 @@ export function Navbar() {
             <NavigationMenuList className="">
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
+                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-lg font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
                   href="#"
                 >
                   Home
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  ">
+                <NavigationMenuTrigger className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-lg font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  ">
                   Servicess
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-stone-800 border-none">
                   {" "}
                   <Link
-                    className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
+                    className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-lg font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
                     href="#"
                   >
                     dsaddasdasdasdasd
@@ -123,7 +123,7 @@ export function Navbar() {
               </NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
+                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-lg font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
                   href="#"
                 >
                   About
@@ -132,7 +132,7 @@ export function Navbar() {
 
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
+                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-lg font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
                   href="#"
                 >
                   Portfolio
@@ -141,7 +141,7 @@ export function Navbar() {
 
               <NavigationMenuLink asChild>
                 <Link
-                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-sm font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
+                  className="group inline-flex h-9 uppercase  w-max items-center justify-center rounded-md  px-4 py-2 text-lg font-semibold transition-colors hover:bg-orange-400 hover:text-gray-900  "
                   href="/contact"
                 >
                   Contact
@@ -154,7 +154,7 @@ export function Navbar() {
             src="/logo-makak-horW.png"
             width={250}
             height={500}
-            className="text-red-500 lg:mr-12 mr-6 h-10 w-auto lg:w-52 lg:h-auto group"
+            className="text-red-500 lg:mr-12 mr-6 h-10 w-auto lg:w-[15rem] lg:h-auto group"
           ></Image>
         </div>
       </header>{" "}

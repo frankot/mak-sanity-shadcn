@@ -52,6 +52,13 @@ export default function Nav2() {
   };
   const menuRef = useRef(null);
 
+  const handleScrollDown = () => {
+
+    window.scrollTo({
+      top: isScrolled ? window.scrollY - window.innerHeight : window.scrollY + window.innerHeight*1.24,      behavior: 'smooth',
+    });
+  };
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -95,8 +102,8 @@ export default function Nav2() {
           <button></button>
         )}
 
-        <button className={ `${
-              isScrolled && " rotate-180 "
+        <button onClick={handleScrollDown} className={ `${
+              isScrolled && " opacity-0 "
             } fixed right-4 top-[90vh] z-50 duration-1000`}>
           <svg
             data-slot="icon"

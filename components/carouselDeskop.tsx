@@ -50,7 +50,7 @@ export default function CarouselDesktop({ className, photos }) {
     >
       <div
         ref={containerRef}
-        className="flex snap-x snap-mandatory pb-4  gap-x-2 lg:gap-x-4 overflow-y-scroll"
+        className="flex snap-x snap-mandatory pb-4  gap-x-2 lg:gap-x-4 overflow-x-scroll"
       >
         {photos.map((photo, idx) => (
           <div key={idx} className="flex-shrink-0 snap-center">

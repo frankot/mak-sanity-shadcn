@@ -131,7 +131,7 @@ export default function Contact() {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            className=" h-[25rem] lg:h-[32rem]  my-auto  border-[6px] rounded-lg border-orange-500"
+            className=" h-[25rem] lg:h-[32rem] m-5 my-auto rounded-xl "
           ></iframe>
         </div>
       </div>{" "}
