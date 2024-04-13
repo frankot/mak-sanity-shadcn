@@ -125,7 +125,7 @@ export default function Nav2() {
         <div
           className={`${
             isOpen ? "opacity-0 " : ""
-          } absolute  transition-all ease-in-out duration-700  top-0 z-30 justify-center mt-10  flex w-full`}
+          } absolute transition-all ease-in-out duration-700  top-0 z-30 justify-center mt-10  flex w-full`}
         >
           {" "}
           <Image

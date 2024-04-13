@@ -24,10 +24,12 @@ export default function Home() {
   return (
     <div className="overscroll-y-contain">
       <Video />
+      
+        {" "}
+        <Ab />
+        <NewsFeatured2 />
+   
 
-      <Ab />
-      <NewsFeatured3 />
-      <NewsFeatured2 />
       {/* <hr  className="h-1 bg-orange-400 mt-16 mb-20 mx-20"/> */}
 
       {/* <LineBreak /> */}

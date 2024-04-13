@@ -4,4 +4,6 @@ export interface newsCard {
   currentSlug: string;
   image: any;
   id: string;
+  content: any;
+  date: string;
 }

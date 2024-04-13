@@ -23,7 +23,7 @@ export default function CarouselDesktop({ className, photos }) {
             behavior: "smooth",
           });
         }
-      }, 4000);
+      }, 3000);
     };
 
     const stopScrolling = () => {

@@ -18,7 +18,7 @@ export default function NewsCard2({ newsItem }) {
         <h1 className="line-clamp-1 text-lg text-stone-900 font-bold">{newsItem.title}</h1>
         <hr className="h-[3px] bg-orange-400 " />
         <p className="mt-4 line-clamp-3 text-stone-800">{newsItem.copy}</p>
-        <button className="absolute uppercase bottom-3 right-3 inline-flex items-center rounded-full bg-orange-400 px-3 py-2 text-center text-xs lg:text-sm font-medium text-white ">
+        <button className="absolute uppercase bottom-3 right-3 inline-flex duration-300 hover:bg-orange-500 items-center rounded-full bg-orange-400 px-3 py-2 text-center text-xs lg:text-sm font-medium text-white ">
           {" "}
           read more
           <svg

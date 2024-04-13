@@ -156,7 +156,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="my-6 h-[2px]  border-none bg-orange-400" />
+        <hr className="my-6   h-1  border-none bg-orange-500" />
 
         <div>
           <p className="text-center text-stone-300 ">
@@ -164,6 +164,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
+      
     </footer>
   );
 }
