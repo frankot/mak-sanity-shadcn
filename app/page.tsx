@@ -20,6 +20,7 @@ const PHOTOS_SLIDES = [
   "/Slideshow/s4.jpg",
   "/Slideshow/s5.jpg",
 ];
+
 export default function Home() {
   return (
     <div className="overscroll-y-contain">
