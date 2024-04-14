@@ -28,7 +28,7 @@ export default async function NewsFeatured2() {
         Aktualności
       </h1>
       {/* <Title title="Aktualności" /> */}
-      <div className="mx-auto max-w-6xl px-6 lg:px-0 mb-10">
+      <div className="mx-auto max-w-7xl px-6 lg:px-0 mb-10">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:ml-auto lg:pl-4 lg:pt-12">
             <div className="lg:max-w-lg relative">
@@ -142,7 +142,7 @@ export default async function NewsFeatured2() {
         </div>
       </div> */}
 
-      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-6xl mx-auto gap-8  w-full">
+      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-7xl mx-auto gap-8  w-full">
         {news.slice(1, 4).map((news, idx) => (
           <NewsCard2 newsItem={news} key={idx} />
         ))}

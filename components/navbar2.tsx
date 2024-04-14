@@ -25,7 +25,7 @@ export default function Nav2() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = 400; 
+      const threshold = 400;
       const scrolled = window.scrollY;
       if (scrolled > threshold) {
         setIsScrolled(true);
@@ -53,9 +53,11 @@ export default function Nav2() {
   const menuRef = useRef(null);
 
   const handleScrollDown = () => {
-
     window.scrollTo({
-      top: isScrolled ? window.scrollY - window.innerHeight : window.scrollY + window.innerHeight*1.24,      behavior: 'smooth',
+      top: isScrolled
+        ? window.scrollY - window.innerHeight
+        : window.scrollY + window.innerHeight * 1.24,
+      behavior: "smooth",
     });
   };
 
@@ -76,7 +78,9 @@ export default function Nav2() {
       <div className="relative  flex w-full items-center">
         {pathname === "/" ? (
           <button
-            className={`${isOpen && "hidden "}  m-10 mt-24 lg:mt-[90px] ml-0 fixed -top-10 left-14 z-40 `}
+            className={`${
+              isOpen && "hidden "
+            }   left-5 mt-[100px] lg:mt-[90px] ml-0 fixed -top-10 lg:left-14 z-40 `}
             onClick={toggleMenu}
           >
             {" "}
@@ -84,7 +88,7 @@ export default function Nav2() {
               data-slot="icon"
               aria-hidden="true"
               fill="none"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -102,14 +106,17 @@ export default function Nav2() {
           <button></button>
         )}
 
-        <button onClick={handleScrollDown} className={ `${
-              isScrolled && " opacity-0 "
-            } fixed right-4 top-[90vh] z-50 duration-1000`}>
+        <button
+          onClick={handleScrollDown}
+          className={`${
+            isScrolled && " opacity-0 "
+          } fixed right-4 top-[90vh] z-50 duration-1000`}
+        >
           <svg
             data-slot="icon"
             aria-hidden="true"
             fill="none"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -153,19 +160,22 @@ export default function Nav2() {
           <ul className="flex flex-col gap-y-2 text-black tracking-tighter capitalize font-semibold py-16 pr-5 text-2xl">
             {menuItems.map((item, idx) => (
               <li
-                className="hover:translate-x-2  w-fit px-4 py-2 duration-300 transition rounded-xl"
+                className="hover:bg-orange-400  w-fit px-4 py-2 duration-500  rounded-xl"
                 key={idx}
               >
                 {item.name === "Inne" ? (
                   <div>
-                    <button onClick={toggleInne} className="flex items-center ">
+                    <button
+                      onClick={toggleInne}
+                      className={`flex items-center `}
+                    >
                       <span>Inne</span>
                       <svg
-                        className="h-6"
+                        className="h-6 mt-2"
                         data-slot="icon"
                         aria-hidden="true"
                         fill="none"
-                        stroke-width="2"
+                        strokeWidth="2"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -179,8 +189,8 @@ export default function Nav2() {
                     </button>
                     <div
                       className={`${
-                        isInne ? "translate-x-0 " : "hidden -translate-x-44"
-                      } flex duration-1000 transition-all ease-in-out ml-2 gap-y-2 text-md text-stone-700 flex-col`}
+                        !isInne && "hidden"
+                      } flex  ml-2 gap-y-2 text-[1.3rem] text-stone-800 flex-col`}
                     >
                       {subItems.map((inn, idx) => (
                         <Link key={idx} onClick={toggleMenu} href={item.href}>
@@ -216,7 +226,7 @@ export default function Nav2() {
               data-slot="icon"
               aria-hidden="true"
               fill="none"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"

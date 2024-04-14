@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NewsCard2({ newsItem }) {
   return (
     <Link href={`/news/${newsItem.currentSlug}`}>
-    <div className="rounded-2xl flex flex-col h-[475px] bg-opacity-[.15] hover:bg-white hover:scale-[1.05] duration-300 shadow-lg">
+    <div className="rounded-2xl flex flex-col h-[475px] bg-opacity-[.15] hover:bg-white hover:scale-[1.02] duration-300 shadow-lg">
       <div className="relative w-full h-3/5 ">
         <Image
           src={urlFor(newsItem.image).url()}
