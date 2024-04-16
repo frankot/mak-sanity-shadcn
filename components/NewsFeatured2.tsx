@@ -24,9 +24,9 @@ export default async function NewsFeatured2() {
   const news: newsCard[] = await getData();
   return (
     <div className="px-6  sm:px-10 md:px-24 mt-20 mx-auto overflow-x-hidden relative pt-20">
-      <h1 className="text-4xl mx-72 pb-3 my-20 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
+      {/* <h1 className="text-4xl mx-72 pb-3 my-20 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
         Aktualności
-      </h1>
+      </h1> */}
       {/* <Title title="Aktualności" /> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-0 mb-10">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">

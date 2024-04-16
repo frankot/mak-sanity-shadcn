@@ -23,7 +23,7 @@ const PHOTOS_SLIDES = [
 
 export default function Home() {
   return (
-    <div className="overscroll-y-contain">
+    <div className="overscroll-y-contain bg-stone-100">
       <Video />
       
         {" "}

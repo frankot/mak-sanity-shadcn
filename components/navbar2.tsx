@@ -21,7 +21,7 @@ const subItems = [
 export default function Nav2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInne, setIsInne] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +42,7 @@ export default function Nav2() {
     };
   }, []); //
 
-  const pathname = usePathname();
+  const isMain = usePathname() === "/";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -75,42 +75,42 @@ export default function Nav2() {
 
   return (
     <>
-      <div className="relative  flex w-full items-center">
-        {pathname === "/" ? (
-          <button
-            className={`${
-              isOpen && "hidden "
-            }   left-5 mt-[100px] lg:mt-[90px] ml-0 fixed -top-16 lg:left-14 z-40 `}
-            onClick={toggleMenu}
-          >
-            {" "}
-            <svg
-              data-slot="icon"
-              aria-hidden="true"
-              fill="none"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-16  ml-2 text-orange-500 bg-stone-800 rounded  border-orange-500 border-2 p-2 bg-opacity-95  
+      <div
+        className={`${
+          isMain ? "fixed" : " absolute"
+        } z-30  flex w-full items-center `}
+      >
+        <button
+          className={`${
+            isOpen && "hidden "
+          }   left-5 mt-[100px] lg:mt-[90px] ml-0 absolute -top-[4.5rem] lg:left-14 z-40 `}
+          onClick={toggleMenu}
+        >
+          {" "}
+          <svg
+            data-slot="icon"
+            aria-hidden="true"
+            fill="none"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-14  ml-2 text-orange-500 bg-stone-800 rounded  border-orange-500 border-2 p-2 bg-opacity-95  
   "
-            >
-              <path
-                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </button>
-        ) : (
-          <button></button>
-        )}
+          >
+            <path
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
 
         <button
           onClick={handleScrollDown}
           className={`${
             isScrolled && " opacity-0 "
-          } fixed right-4 top-[90vh] z-50 duration-1000 border-orange-500 border-2 rounded-full`}
+          } fixed right-7 top-[91vh] z-50 duration-1000 `}
         >
           <svg
             data-slot="icon"
@@ -120,7 +120,7 @@ export default function Nav2() {
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-16 text-orange-500 bg-stone-800 rounded-full p-2 bg-opacity-40 "
+            className="h-14 text-orange-500 bg-stone-800 border-orange-500 border-2 rounded  p-2 bg-opacity-40 "
           >
             <path
               d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
@@ -130,28 +130,36 @@ export default function Nav2() {
           </svg>
         </button>
         <div
-          className={`${isOpen &&  "opacity-0 "} ${
+          className={`${
+            isMain ? (
+              <>
+                ${isOpen && "opacity-0 "} $
+                {isScrolled && " bg-stone-900 bg-opacity-95"}{" "}
+              </>
+            ) : (
+              "bg-stone-800 "
+            )
+          }  ${
             isScrolled && " bg-stone-900 bg-opacity-95"
           } 
-          fixed transition-all ease-in-out  duration-700  top-0 z-30 justify-center py-5  flex w-full`}
+          absolute transition-all ease-in-out  duration-700  top-0 z-30 justify-center py-3  flex w-full`}
         >
           {" "}
           <Image
             src="/logo-makak-horO5.png"
             height={1000}
             width={1000}
-            className="h-14 mt-6 ml-8 md:m-0 md:h-16   w-auto"
+            className={`${isOpen && "opacity-0 "} duration-500 h-14 mt-6 ml-8 md:m-0 md:h-16   w-auto`}
             alt=" Horizontal orange Makak Logo"
           />
         </div>
-        <div className="fixed flex right-5 top-7 text-xl z-40 text-orange-500">
-        <div className="bg-stone-800 px-4 py-2 rounded border-orange-500 border-2 bg-opacity-95">
+        <div className="absolute flex right-5 top-5 text-xl z-40 text-orange-500">
+          <div className="bg-stone-800 px-4 py-2 rounded border-orange-500 border-2 bg-opacity-95">
             <span>PL</span>
           </div>
           <div className="bg-stone-800 px-4 py-2 rounded-lg ml-4">
             <span>ENG</span>
           </div>
-
         </div>
       </div>
       <div
