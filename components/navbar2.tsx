@@ -21,7 +21,7 @@ const subItems = [
 export default function Nav2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInne, setIsInne] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,8 +95,7 @@ export default function Nav2() {
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-14  ml-2 text-orange-500 bg-stone-800 rounded  border-orange-500 border-2 p-2 bg-opacity-95  
-  "
+            className="h-14  ml-2 text-orange-500 bg-stone-800 rounded  border-orange-500 border-2 p-2 bg-opacity-95 "
           >
             <path
               d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"

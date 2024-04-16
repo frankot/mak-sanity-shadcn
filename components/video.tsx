@@ -29,7 +29,7 @@ export default function Video() {
         <source src="/promo-vid.mp4" type="video/mp4" />
       </video> */}
       <iframe
-        src="https://player.vimeo.com/video/932368948?background=1"
+        src="https://player.vimeo.com/video/932368948?background=1#t=0m5s"
         width="640"
         height="360"
         allow="autoplay; fullscreen"
