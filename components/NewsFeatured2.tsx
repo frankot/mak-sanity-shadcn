@@ -23,15 +23,15 @@ async function getData() {
 export default async function NewsFeatured2() {
   const news: newsCard[] = await getData();
   return (
-    <div className="px-6  sm:px-10 md:px-24 mt-20 mx-auto overflow-x-hidden relative pt-20">
+    <div className="px-6  sm:px-10 md:px-24 lg:mx-8 mt-20 mx-auto overflow-x-hidden relative pt-20">
       {/* <h1 className="text-4xl mx-72 pb-3 my-20 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
         Aktualności
       </h1> */}
       {/* <Title title="Aktualności" /> */}
       <div className="mx-auto max-w-7xl px-6 lg:px-0 mb-10">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="lg:ml-auto lg:pl-4 lg:pt-12">
-            <div className="lg:max-w-lg relative">
+        <div className="hidden  mx-auto lg:grid  sm:gap-y-20 lg:mx-0 lg:max-w-none md:grid-cols-2">
+          <div className="lg:ml-auto pl-6  lg:pt-12">
+            <div className="lg:max-w-[33rem] relative">
               <h2 className="text-base font-semibold leading-7 text-orange-500">
                 3 Marzec 2024 15:45
               </h2>
@@ -57,7 +57,7 @@ export default async function NewsFeatured2() {
                 <PortableText value={news[0].content} />{" "}
               </dl>
               <Link href={`/news/${news[0].currentSlug}`}>
-                <button className="lg:absolute  -bottom-24 w-full   right-5 inline-flex items-center rounded-full hover:bg-orange-500 bg-orange-400 px-3 py-2 text-xs lg:text-lg  duration-300 font-medium text-white ">
+                <button className="lg:absolute  -bottom-24    right-5 inline-flex items-center rounded-full hover:bg-orange-500 bg-orange-400 px-3 py-2 text-xs lg:text-lg  duration-300 font-medium text-white ">
                   {" "}
                Czytaj Dalej
                   <svg
@@ -155,3 +155,4 @@ export default async function NewsFeatured2() {
     </div>
   );
 }
+``

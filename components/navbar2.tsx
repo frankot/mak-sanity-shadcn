@@ -21,26 +21,32 @@ const subItems = [
 export default function Nav2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isInne, setIsInne] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = 400;
+      const threshold = 150;
       const scrolled = window.scrollY;
-      if (scrolled > threshold) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      // Check if scrolled past landing page threshold
+      setIsScrolled(scrolled > threshold);
+
+      // Show/hide navbar based on scroll direction
+      const scrolledUp = scrolled < prevScrollPos || scrolled < 300;
+      setVisible(scrolledUp);
+      setPrevScrollPos(scrolled);
+      console.log("scrolled: "+scrolled);
+      console.log("[prevScrollPos]: "+prevScrollPos);
+
+
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup function to remove the event listener when component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); //
+  }, [prevScrollPos]);
 
   const isMain = usePathname() === "/";
 
@@ -75,15 +81,11 @@ export default function Nav2() {
 
   return (
     <>
-      <div
-        className={`${
-          isMain ? "fixed" : " absolute"
-        } z-30  flex w-full items-center `}
-      >
+      <div className={`fixed z-30  flex w-full items-center `}>
         <button
-          className={`${
-            isOpen && "hidden "
-          }   left-5 mt-[100px] lg:mt-[90px] ml-0 absolute -top-[4.5rem] lg:left-14 z-40 `}
+          className={`${isOpen && "hidden "}  ${
+            visible ? "translate-y-0" : "-translate-y-32"
+          } duration-1000 left-5 mt-[100px] lg:mt-[90px] ml-0 absolute -top-[4.5rem] lg:left-14 z-40 `}
           onClick={toggleMenu}
         >
           {" "}
@@ -95,7 +97,7 @@ export default function Nav2() {
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-14  ml-2 text-orange-500 bg-stone-800 rounded  border-orange-500 border-2 p-2 bg-opacity-95 "
+            className="h-16 p-2  ml-2 text-orange-500  rounded-full  bg-opacity-95 hover:bg-orange-500 hover:text-stone-800 duration-300 "
           >
             <path
               d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
@@ -119,7 +121,7 @@ export default function Nav2() {
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-14 text-orange-500 bg-stone-800 border-orange-500 border-2 rounded  p-2 bg-opacity-40 "
+            className="h-14 text-orange-500 bg-stone-800 rounded-full p-2 bg-opacity-40 hover:bg-orange-500 hover:text-stone-800 duration-300 "
           >
             <path
               d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
@@ -138,9 +140,9 @@ export default function Nav2() {
             ) : (
               "bg-stone-800 "
             )
-          }  ${
-            isScrolled && " bg-stone-900 bg-opacity-95"
-          } 
+          }  ${isScrolled && " bg-stone-900 bg-opacity-95"}  ${
+            visible ? "translate-y-0" : "-translate-y-full"
+          }
           absolute transition-all ease-in-out  duration-700  top-0 z-30 justify-center py-3  flex w-full`}
         >
           {" "}
@@ -148,19 +150,27 @@ export default function Nav2() {
             src="/logo-makak-horO5.png"
             height={1000}
             width={1000}
-            className={`${isOpen && "opacity-0 "} duration-500 h-14 mt-6 ml-8 md:m-0 md:h-16   w-auto`}
+            className={`${
+              isOpen && "opacity-0 "
+            } duration-500 h-14 mt-6 ml-8 md:m-0 md:h-16   w-auto`}
             alt=" Horizontal orange Makak Logo"
           />
         </div>
-        <div className="absolute flex right-5 top-5 text-xl z-40 text-orange-500">
-          <div className="bg-stone-800 px-4 py-2 rounded border-orange-500 border-2 bg-opacity-95">
-            <span>PL</span>
-          </div>
-          <div className="bg-stone-800 px-4 py-2 rounded-lg ml-4">
-            <span>ENG</span>
-          </div>
+      </div>
+
+      <div
+        className={`${
+          visible ? "translate-y-0 " : "-translate-y-96 "
+        } fixed flex right-5 top-5 text-xl duration-500 z-40 text-orange-500`}
+      >
+        <div className="px-4 py-2 rounded-full bg-orange-500 text-stone-800 duration-300">
+          <span>PL</span>
+        </div>
+        <div className="rounded-full px-4 py-2 ml-4 hover:bg-orange-500 hover:text-stone-800 duration-300">
+          <span>ENG</span>
         </div>
       </div>
+
       <div
         ref={menuRef}
         className={`${
@@ -172,7 +182,7 @@ export default function Nav2() {
                         h-screen w-[75vw] lg:w-[33vw]  bg-orange-500  px-10 py-4 transition-all relative duration-500 flex flex-col justify-between ease-out ${
                           isOpen
                             ? "translate-x-0 "
-                            : "-translate-x-[73vw] lg:-translate-x-[32vw] "
+                            : "-translate-x-[73vw] lg:-translate-x-[32.5vw] "
                         }`}
         >
           <ul className="flex flex-col gap-y-2 text-black tracking-tighter capitalize font-semibold py-16 pr-5 text-2xl">
