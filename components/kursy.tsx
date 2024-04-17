@@ -87,7 +87,7 @@ const posts = [
 
 export default function Kursy() {
   return (
-    <div className="bg-stone-800 py-10">
+    <div className="bg-stone-800 py-10 my-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl ">
           <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl md:text-7xl h-fit bg-gradient-to-r from-orange-800 via-orange-400 to-stone-100 inline-block text-transparent py-2 bg-clip-text">

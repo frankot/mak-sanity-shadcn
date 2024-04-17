@@ -6,7 +6,6 @@ import Footer from "@/components/footer";
 import Navbar2 from "@/components/navbar2";
 import Partners from "@/components/partners";
 import Nav2 from "@/components/navbar2";
-import SmoothScrolling from "@/components/SmoothScrolling";
 import { K2D } from 'next/font/google'
 import Navbara from "@/components/test";
 const inter = Inter({ subsets: ["latin"] });
@@ -29,7 +28,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={k2d.className + " bg-stone-800 scroll-smooth"}>
         <Nav2/>
-        {children}
+         {children}
+       
 
         <Footer />
       </body>

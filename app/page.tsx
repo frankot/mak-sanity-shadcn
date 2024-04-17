@@ -24,26 +24,19 @@ const PHOTOS_SLIDES = [
 export default function Home() {
   return (
     <div className="overscroll-y-contain bg-stone-100">
-      <Video />
-      
-        {" "}
-        <Ab />
-        <hr  className="h-1 bg-orange-400 mt-32 mb-20 mx-20"/>
-
-        <NewsFeatured2 />
-   
-
-
+      <Video /> 
+      <Ab />
+      <hr className="h-1 bg-orange-400 mt-32 mb-20 mx-20" />
+      <NewsFeatured2 />
+      {/* <Kursy/> */}
       {/* <LineBreak /> */}
       {/* <About /> */}
       <CarouselMobile photos={PHOTOS_SLIDES} />
       <CarouselDesktop photos={PHOTOS_SLIDES} />
       {/* <hr className="h-2   w-screen bg-orange-500  mb-6" /> */}
-      <hr  className="h-1 bg-orange-400 m-20"/>
-
+      <hr className="h-1 bg-orange-400 m-20" />
       <Contact />
-      <hr  className="h-1 bg-orange-400 m-20 my-16"/>
-
+      <hr className="h-1 bg-orange-400 m-20 my-16" />
       <Partners />
     </div>
   );

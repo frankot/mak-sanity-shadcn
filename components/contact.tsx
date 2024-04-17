@@ -9,8 +9,8 @@ import Partners from "./partners";
 export default function Contact() {
   return (
     <div className="relative isolate lg:pt-16 bg-stone-100">
-      <div className="mx-auto grid max-w-[90rem] grid-cols-1 lg:grid-cols-2">
-        <div className="relative px-6  pt-24 sm:pt-32 lg:static lg:px-8 lg:pl-16  lg:pb-24">
+      <div className="mx-auto grid max-w-[90rem] lg:px-10 grid-cols-1 lg:grid-cols-2">
+        <div className="relative px-6  pt-24 lg:static lg:px-8 lg:pl-16  lg:pb-24">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             {/* <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-gray-900/10 ">
                 <svg

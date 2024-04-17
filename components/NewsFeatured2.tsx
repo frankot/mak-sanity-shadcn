@@ -23,12 +23,12 @@ async function getData() {
 export default async function NewsFeatured2() {
   const news: newsCard[] = await getData();
   return (
-    <div className="px-6  sm:px-10 md:px-24 lg:mx-8 mt-20 mx-auto overflow-x-hidden relative pt-20">
+    <div className="px-6 sm:px-10 md:px-24 lg:px-28 mt-20 mx-auto overflow-x-hidden relative pt-20 lg:max-w-[90rem]">
       {/* <h1 className="text-4xl mx-72 pb-3 my-20 border-b-8 border-orange-400 font-bold tracking-tight  sm:text-6xl">
         Aktualności
       </h1> */}
       {/* <Title title="Aktualności" /> */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-0 mb-10">
+      <div className="mx-auto px-6 lg:px-0 mb-10">
         <div className="hidden  mx-auto lg:grid  sm:gap-y-20 lg:mx-0 lg:max-w-none md:grid-cols-2">
           <div className="lg:ml-auto pl-6  lg:pt-12">
             <div className="lg:max-w-[33rem] relative">
@@ -142,7 +142,7 @@ export default async function NewsFeatured2() {
         </div>
       </div> */}
 
-      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-7xl mx-auto gap-8  w-full">
+      <div className="grid px-4 sm:px-12  md:px-0 grid-cols-1 lg:grid-cols-3  mx-auto gap-8  w-full">
         {news.slice(1, 4).map((news, idx) => (
           <NewsCard2 newsItem={news} key={idx} />
         ))}
@@ -155,4 +155,3 @@ export default async function NewsFeatured2() {
     </div>
   );
 }
-``
