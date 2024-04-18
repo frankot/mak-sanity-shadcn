@@ -37,7 +37,7 @@ export default function Activities() {
     <div className="max-w-2xl  lg:max-w-7xl mx-auto -mt-16 mb-32 ">
       {" "}
       {/* <Title title="Aktywności" subtitle="Jako możesz się u nas bawić?" /> */}
-      <div className=" flex flex-wrap justify-center gap-10 lg:gap-16 items-center ">
+      <div className=" flex flex-wrap justify-center gap-10 xl:gap-20 xl:-ml- items-center ">
         {ACTIVITIES.map((act) => (
           
           <div

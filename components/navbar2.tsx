@@ -23,6 +23,7 @@ export default function Nav2() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -182,7 +183,7 @@ export default function Nav2() {
                         h-screen w-[75vw] lg:w-[33vw]  bg-orange-500  px-10 py-4 transition-all relative duration-500 flex flex-col justify-between ease-out ${
                           isOpen
                             ? "translate-x-0 "
-                            : "-translate-x-[73vw] lg:-translate-x-[32.5vw] "
+                            : "-translate-x-[73vw] lg:-translate-x-[33vw] "
                         }`}
         >
           <ul className="flex flex-col gap-y-2 text-black tracking-tighter capitalize font-semibold py-16 pr-5 text-2xl">

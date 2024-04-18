@@ -7,9 +7,8 @@ export default function Footer() {
           <div className="-mx-6 w-full lg:w-2/5">
             <div className="px-6 justify-center flex flex-col items-center lg:items-start">
               <a href="#">
-                {/* <img className="h-24 w-auto" src={logo} alt="" /> */}
                 <Image
-                  src="/logo-makak.png"
+                  src="/logo-makakO.png"
                   height={500}
                   width={500}
                   alt="Logo makak white"
@@ -125,19 +124,19 @@ export default function Footer() {
                   href="#"
                   className="mt-2 block text-sm text-gray-300 hover:underline "
                 >
-                  Mega cloud
+                  Kursy
                 </a>
                 <a
                   href="#"
                   className="mt-2 block text-sm text-gray-300 hover:underline "
                 >
-                  Aperion UI
+                  Sekcje
                 </a>
                 <a
                   href="#"
                   className="mt-2 block text-sm text-gray-300 hover:underline "
                 >
-                  Meraki UI
+                Szkolenia
                 </a>
               </div>
 

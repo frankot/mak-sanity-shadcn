@@ -11,7 +11,7 @@ export default function ab() {
     <main className="isolate ">
       <div className="relative isolate -z-10">
         <svg
-          className="absolute inset-x-0 top-0 -z-10 h-[200vh] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+          className="absolute inset-x-0 top-0 -z-10 h-[200vh] w-full stroke-gray-200 [mask-image:radial-gradient(62rem_77rem_at_center,white,transparent)]"
           aria-hidden="true"
         >
           <defs>
@@ -44,7 +44,7 @@ export default function ab() {
           aria-hidden="true"
         >
           <div
-            className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-orange-600 opacity-30"
+            className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-orange-600 opacity-50"
             style={{
               clipPath:
                 "polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)",
