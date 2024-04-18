@@ -10,7 +10,7 @@ export default function NewsCard2({ newsItem }) {
           src={urlFor(newsItem.image).url()}
           fill={true}
           alt="Image of news article"
-          sizes="23vh"
+          sizes="22vh"
           className="object-cover rounded-t-2xl"
         />
       </div>

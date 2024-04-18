@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function NewsArt({ data }) {
   const router = useRouter();
   return (
-    <div className="overflow-x-hidden">
+    <>
       <div className="text-center relative  pb-20">
         {" "}
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl  ">
@@ -41,7 +41,7 @@ export default function NewsArt({ data }) {
         </button>{" "}
       </div>
 
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 ">
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
@@ -51,10 +51,10 @@ export default function NewsArt({ data }) {
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden hover:scale-110 duration-300">
+        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden hover:scale-110 duration-300 ">
           <Image
             src={urlFor(data.image).url()}
-            className="ml-5 lg:ml-0 rounded"
+            className="ml-5 lg:ml-0 rounded drop-shadow-2xl"
             height={500}
             width={500}
             alt="ssdsad"
@@ -123,6 +123,6 @@ export default function NewsArt({ data }) {
           </div>
         </div> */}
       </div>
-    </div>
+    </>
   );
 }

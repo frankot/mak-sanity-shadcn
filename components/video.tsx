@@ -17,31 +17,31 @@ export default function Video() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate video loaded state after some delay (replace with actual event)
+    setTimeout(() => setIsLoading(false), 1000);
+  }, []);
+
   return (
     <div className="video-background relative h-screen w-screen  ">
-      {/* <video
-        className="absolute lg:top-0 lg:left-0 z-10  h-screen w-screen object-cover"
-        autoPlay
-        loop
-        playsInline
-        preload="auto"
-      >
-        <source src="/promo-vid.mp4" type="video/mp4" />
-      </video> */}
       <iframe
         src="https://player.vimeo.com/video/932368948?background=1#t=0m5s"
         width="640"
         height="360"
-    
+        onLoadedMetadata={() => setIsLoading(false)} // Update loading state on video meta data load
       ></iframe>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-stone-900 via-gray-900/40" />
-
-      {/* <Image src="/logo-makak.png" width={500} height={500} className="absolute top-20 left-1/3 z-30"/> */}
-      <div className="bottom-20 left-1/2 absolute " id="scroll-down-animation">
-        <span className={`mouse ${isScrollingDown ? "hideAnim" : ""}`}>
-          <span className="move "></span>
-        </span>
-      </div>
+      {isLoading && ( // Show image only while loading
+        <Image
+          src="/placeholder.png" // Replace with your image path
+          fill={true}
+          alt="Video Preview"
+          className="absolute top-0 left-0  object-cover"
+        />
+      )}
+      {/* Rest of your component */}
     </div>
   );
 }
