@@ -39,6 +39,7 @@ export default function Video() {
           fill={true}
           alt="Video Preview"
           className="absolute top-0 left-0  object-cover"
+          priority={true}
         />
       )}
       {/* Rest of your component */}
