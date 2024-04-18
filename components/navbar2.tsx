@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { log } from "console";
 
 const menuItems = [
   { name: "O nas", href: "/" },
@@ -101,8 +100,8 @@ export default function Nav2() {
           >
             <path
               d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </svg>
         </button>
@@ -125,8 +124,8 @@ export default function Nav2() {
           >
             <path
               d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </svg>
         </button>
@@ -134,6 +133,7 @@ export default function Nav2() {
           className={`${
             isMain ? (
               <>
+              
                 ${isOpen && "opacity-0 "} $
                 {isScrolled && " bg-stone-900 bg-opacity-95"}{" "}
               </>
@@ -158,7 +158,7 @@ export default function Nav2() {
         </div>
       </div>
 
-      <div
+      <div 
         className={`${
           visible ? "translate-y-0 " : "-translate-y-96 "
         } fixed flex right-5 top-5 text-xl duration-500 z-40 text-orange-500`}
@@ -210,8 +210,8 @@ export default function Nav2() {
                       >
                         <path
                           d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>{" "}
                     </button>
@@ -261,8 +261,8 @@ export default function Nav2() {
             >
               <path
                 d="M6 18 18 6M6 6l12 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></path>
             </svg>
           </button>

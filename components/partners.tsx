@@ -15,7 +15,7 @@ export default function Partners() {
               className="h-20"
             >
               <defs>
-                <clipPath id="clip-path">
+                <clipPath id="clipPath">
                   <rect
                     id="Rectangle_3745"
                     data-name="Rectangle 3745"
@@ -45,7 +45,7 @@ export default function Partners() {
                   <g
                     id="Group_3246"
                     data-name="Group 3246"
-                    clip-path="url(#clip-path)"
+                    clipPath="url(#clipPath)"
                   >
                     <path
                       id="Path_3027"

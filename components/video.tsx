@@ -32,7 +32,7 @@ export default function Video() {
         src="https://player.vimeo.com/video/932368948?background=1#t=0m5s"
         width="640"
         height="360"
-        allow="autoplay; fullscreen"
+    
       ></iframe>
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-stone-900 via-gray-900/40" />
 
