@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div className="overscroll-y-contain bg-stone-100">
       <Video /> 
-      {/* <About/> */}
+      <About/>
       <Ab />
       <hr className="h-1 bg-orange-400 mt-32 mb-20 mx-20" />
       <NewsFeatured2 />

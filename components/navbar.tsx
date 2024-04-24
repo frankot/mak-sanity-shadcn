@@ -33,7 +33,7 @@ export function Navbar() {
   return (
     <div className="fixed top-0 w-full z-50 ">
       <header
-        className={`flex h-16 shrink-0 mx-24 mt-4 rounded-full  borsder bg-opacity-90 border-orange-400 items-center text-white px-4 md:px-12 duration-1000    ${
+        className={`flex shrink-0  borsder bg-opacity-90 border-orange-400 items-center text-white px-4 md:px-20 duration-1000 md:py-2    ${
           isScrollingDown && onHeroPage
             ? "bg-opacity-100 bg-stone-800 shadow text-stone-100"
             : "bg-opacity-0"
@@ -46,6 +46,12 @@ export function Navbar() {
         `}
       >
         {" "}
+        <Image
+          src="/logo-makak.png"
+          width={250}
+          height={500}
+          className="text-red-500 lg:mr-12 mr-6 h-10 w-auto lg:w-[10rem] lg:h-auto group"
+        ></Image>
         {/* MOBILE NAV */}
         <Sheet>
           <SheetTrigger asChild>
@@ -96,7 +102,7 @@ export function Navbar() {
         <Link className="mr-6  hidden lg:flex" href="#">
           <span className="sr-only">Acme Inc</span>
         </Link>
-        <div className="w-full flex justify-center lg:justify-between">
+        <div className="w-full flex justify-center lg:justify-end">
           <NavigationMenu className="hidden lg:flex ">
             <NavigationMenuList className="">
               <NavigationMenuLink asChild>
@@ -149,13 +155,6 @@ export function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuList>
           </NavigationMenu>
-          
-          <Image
-            src="/logo-makak-horW.png"
-            width={250}
-            height={500}
-            className="text-red-500 lg:mr-12 mr-6 h-10 w-auto lg:w-[15rem] lg:h-auto group"
-          ></Image>
         </div>
       </header>{" "}
       {/* <LineBreak className="mt-0 mx-0 px-0"/> */}

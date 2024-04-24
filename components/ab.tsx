@@ -56,7 +56,7 @@ export default function ab() {
           <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8  lg:pl-10 lg:pt-32">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1 className="text-4xl font-bold tracking-tight text-orange-500 sm:text-6xl">
+                <h1 className="text-4xl font-semibold tracking-tight text-orange-500 sm:text-6xl">
                   Największy rejon wspinaczkowy na mazowszu!{" "}
                 </h1>
                 <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
@@ -123,9 +123,9 @@ export default function ab() {
         <Activities />
         {/* Content section */}
 
-        <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8 lg:ml-16">
-          <div className="mx-auto max-w-2xl xl:ml-10 lg:mx-0 lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-orange-500 sm:text-4xl">
+        <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:ml-16 lg:px-8 xl:-mt-8">
+          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none xl:ml-10">
+            <h2 className="text-3xl font-semibold tracking-tight text-orange-500 sm:text-4xl">
               Wspinanie jest dla wszystkich
             </h2>
             <div className="mt-6 flex flex-col gap-x-8  gap-y-20 lg:flex-row">
@@ -154,7 +154,7 @@ export default function ab() {
                   </p>
                 </div>
               </div>
-              <div className="lg:flex lg:flex-auto lg:justify-center ml-10 md:ml-0">
+              <div className="ml-10 md:ml-0 lg:flex lg:flex-auto lg:justify-center">
                 <dl className="w-64 space-y-8 xl:w-80">
                   {stats.map((stat) => (
                     <div
